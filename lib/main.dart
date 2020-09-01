@@ -1,24 +1,12 @@
-import 'dart:developer';
-
 import 'package:cocktail/locator.dart';
-import 'package:cocktail/models/drinks.dart';
 import 'package:cocktail/services/api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
   setupLocator();
   runApp(MyApp());
 }
-
-final dioProvider = Provider((_) => locator<Api>());
-
-final $family = FutureProvider.autoDispose.family;
-
-final character = $family<Drinks, String>((ref, id) async {
-  return ref.read(dioProvider).getDrink();
-});
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -45,10 +33,6 @@ class MyHomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     var _counter = useState(0);
-
-    api.getDrink().then((value) => log(value.drinks.first.toString()));
-
-    useProvider(character('')).when(data: null, loading: null, error: null);
 
     return Scaffold(
       appBar: AppBar(
