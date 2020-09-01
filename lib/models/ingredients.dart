@@ -6,7 +6,7 @@ part 'ingredients.g.dart';
 @freezed
 abstract class Ingredients with _$Ingredients {
   const factory Ingredients(
-    List<Ingredient> idIngredient,
+    List<Ingredient> ingredients,
   ) = _Ingredients;
 
   factory Ingredients.fromJson(Map<String, dynamic> json) =>

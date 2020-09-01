@@ -16,9 +16,9 @@ class _$IngredientsTearOff {
   const _$IngredientsTearOff();
 
 // ignore: unused_element
-  _Ingredients call(List<Ingredient> idIngredient) {
+  _Ingredients call(List<Ingredient> ingredients) {
     return _Ingredients(
-      idIngredient,
+      ingredients,
     );
   }
 }
@@ -27,7 +27,7 @@ class _$IngredientsTearOff {
 const $Ingredients = _$IngredientsTearOff();
 
 mixin _$Ingredients {
-  List<Ingredient> get idIngredient;
+  List<Ingredient> get ingredients;
 
   Map<String, dynamic> toJson();
   $IngredientsCopyWith<Ingredients> get copyWith;
@@ -37,7 +37,7 @@ abstract class $IngredientsCopyWith<$Res> {
   factory $IngredientsCopyWith(
           Ingredients value, $Res Function(Ingredients) then) =
       _$IngredientsCopyWithImpl<$Res>;
-  $Res call({List<Ingredient> idIngredient});
+  $Res call({List<Ingredient> ingredients});
 }
 
 class _$IngredientsCopyWithImpl<$Res> implements $IngredientsCopyWith<$Res> {
@@ -49,12 +49,12 @@ class _$IngredientsCopyWithImpl<$Res> implements $IngredientsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object idIngredient = freezed,
+    Object ingredients = freezed,
   }) {
     return _then(_value.copyWith(
-      idIngredient: idIngredient == freezed
-          ? _value.idIngredient
-          : idIngredient as List<Ingredient>,
+      ingredients: ingredients == freezed
+          ? _value.ingredients
+          : ingredients as List<Ingredient>,
     ));
   }
 }
@@ -65,7 +65,7 @@ abstract class _$IngredientsCopyWith<$Res>
           _Ingredients value, $Res Function(_Ingredients) then) =
       __$IngredientsCopyWithImpl<$Res>;
   @override
-  $Res call({List<Ingredient> idIngredient});
+  $Res call({List<Ingredient> ingredients});
 }
 
 class __$IngredientsCopyWithImpl<$Res> extends _$IngredientsCopyWithImpl<$Res>
@@ -79,43 +79,43 @@ class __$IngredientsCopyWithImpl<$Res> extends _$IngredientsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object idIngredient = freezed,
+    Object ingredients = freezed,
   }) {
     return _then(_Ingredients(
-      idIngredient == freezed
-          ? _value.idIngredient
-          : idIngredient as List<Ingredient>,
+      ingredients == freezed
+          ? _value.ingredients
+          : ingredients as List<Ingredient>,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_Ingredients implements _Ingredients {
-  const _$_Ingredients(this.idIngredient) : assert(idIngredient != null);
+  const _$_Ingredients(this.ingredients) : assert(ingredients != null);
 
   factory _$_Ingredients.fromJson(Map<String, dynamic> json) =>
       _$_$_IngredientsFromJson(json);
 
   @override
-  final List<Ingredient> idIngredient;
+  final List<Ingredient> ingredients;
 
   @override
   String toString() {
-    return 'Ingredients(idIngredient: $idIngredient)';
+    return 'Ingredients(ingredients: $ingredients)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Ingredients &&
-            (identical(other.idIngredient, idIngredient) ||
+            (identical(other.ingredients, ingredients) ||
                 const DeepCollectionEquality()
-                    .equals(other.idIngredient, idIngredient)));
+                    .equals(other.ingredients, ingredients)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(idIngredient);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(ingredients);
 
   @override
   _$IngredientsCopyWith<_Ingredients> get copyWith =>
@@ -128,13 +128,13 @@ class _$_Ingredients implements _Ingredients {
 }
 
 abstract class _Ingredients implements Ingredients {
-  const factory _Ingredients(List<Ingredient> idIngredient) = _$_Ingredients;
+  const factory _Ingredients(List<Ingredient> ingredients) = _$_Ingredients;
 
   factory _Ingredients.fromJson(Map<String, dynamic> json) =
       _$_Ingredients.fromJson;
 
   @override
-  List<Ingredient> get idIngredient;
+  List<Ingredient> get ingredients;
   @override
   _$IngredientsCopyWith<_Ingredients> get copyWith;
 }
