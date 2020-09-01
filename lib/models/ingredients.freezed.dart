@@ -16,15 +16,9 @@ class _$IngredientsTearOff {
   const _$IngredientsTearOff();
 
 // ignore: unused_element
-  _Ingredients call(String idIngredient, String strIngredient,
-      String strDescription, String strType, String strAlcohol, String strAbv) {
+  _Ingredients call(List<Ingredient> idIngredient) {
     return _Ingredients(
       idIngredient,
-      strIngredient,
-      strDescription,
-      strType,
-      strAlcohol,
-      strAbv,
     );
   }
 }
@@ -33,12 +27,7 @@ class _$IngredientsTearOff {
 const $Ingredients = _$IngredientsTearOff();
 
 mixin _$Ingredients {
-  String get idIngredient;
-  String get strIngredient;
-  String get strDescription;
-  String get strType;
-  String get strAlcohol;
-  String get strAbv;
+  List<Ingredient> get idIngredient;
 
   Map<String, dynamic> toJson();
   $IngredientsCopyWith<Ingredients> get copyWith;
@@ -48,13 +37,7 @@ abstract class $IngredientsCopyWith<$Res> {
   factory $IngredientsCopyWith(
           Ingredients value, $Res Function(Ingredients) then) =
       _$IngredientsCopyWithImpl<$Res>;
-  $Res call(
-      {String idIngredient,
-      String strIngredient,
-      String strDescription,
-      String strType,
-      String strAlcohol,
-      String strAbv});
+  $Res call({List<Ingredient> idIngredient});
 }
 
 class _$IngredientsCopyWithImpl<$Res> implements $IngredientsCopyWith<$Res> {
@@ -67,26 +50,11 @@ class _$IngredientsCopyWithImpl<$Res> implements $IngredientsCopyWith<$Res> {
   @override
   $Res call({
     Object idIngredient = freezed,
-    Object strIngredient = freezed,
-    Object strDescription = freezed,
-    Object strType = freezed,
-    Object strAlcohol = freezed,
-    Object strAbv = freezed,
   }) {
     return _then(_value.copyWith(
       idIngredient: idIngredient == freezed
           ? _value.idIngredient
-          : idIngredient as String,
-      strIngredient: strIngredient == freezed
-          ? _value.strIngredient
-          : strIngredient as String,
-      strDescription: strDescription == freezed
-          ? _value.strDescription
-          : strDescription as String,
-      strType: strType == freezed ? _value.strType : strType as String,
-      strAlcohol:
-          strAlcohol == freezed ? _value.strAlcohol : strAlcohol as String,
-      strAbv: strAbv == freezed ? _value.strAbv : strAbv as String,
+          : idIngredient as List<Ingredient>,
     ));
   }
 }
@@ -97,13 +65,7 @@ abstract class _$IngredientsCopyWith<$Res>
           _Ingredients value, $Res Function(_Ingredients) then) =
       __$IngredientsCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String idIngredient,
-      String strIngredient,
-      String strDescription,
-      String strType,
-      String strAlcohol,
-      String strAbv});
+  $Res call({List<Ingredient> idIngredient});
 }
 
 class __$IngredientsCopyWithImpl<$Res> extends _$IngredientsCopyWithImpl<$Res>
@@ -118,55 +80,28 @@ class __$IngredientsCopyWithImpl<$Res> extends _$IngredientsCopyWithImpl<$Res>
   @override
   $Res call({
     Object idIngredient = freezed,
-    Object strIngredient = freezed,
-    Object strDescription = freezed,
-    Object strType = freezed,
-    Object strAlcohol = freezed,
-    Object strAbv = freezed,
   }) {
     return _then(_Ingredients(
-      idIngredient == freezed ? _value.idIngredient : idIngredient as String,
-      strIngredient == freezed ? _value.strIngredient : strIngredient as String,
-      strDescription == freezed
-          ? _value.strDescription
-          : strDescription as String,
-      strType == freezed ? _value.strType : strType as String,
-      strAlcohol == freezed ? _value.strAlcohol : strAlcohol as String,
-      strAbv == freezed ? _value.strAbv : strAbv as String,
+      idIngredient == freezed
+          ? _value.idIngredient
+          : idIngredient as List<Ingredient>,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_Ingredients implements _Ingredients {
-  const _$_Ingredients(this.idIngredient, this.strIngredient,
-      this.strDescription, this.strType, this.strAlcohol, this.strAbv)
-      : assert(idIngredient != null),
-        assert(strIngredient != null),
-        assert(strDescription != null),
-        assert(strType != null),
-        assert(strAlcohol != null),
-        assert(strAbv != null);
+  const _$_Ingredients(this.idIngredient) : assert(idIngredient != null);
 
   factory _$_Ingredients.fromJson(Map<String, dynamic> json) =>
       _$_$_IngredientsFromJson(json);
 
   @override
-  final String idIngredient;
-  @override
-  final String strIngredient;
-  @override
-  final String strDescription;
-  @override
-  final String strType;
-  @override
-  final String strAlcohol;
-  @override
-  final String strAbv;
+  final List<Ingredient> idIngredient;
 
   @override
   String toString() {
-    return 'Ingredients(idIngredient: $idIngredient, strIngredient: $strIngredient, strDescription: $strDescription, strType: $strType, strAlcohol: $strAlcohol, strAbv: $strAbv)';
+    return 'Ingredients(idIngredient: $idIngredient)';
   }
 
   @override
@@ -175,32 +110,12 @@ class _$_Ingredients implements _Ingredients {
         (other is _Ingredients &&
             (identical(other.idIngredient, idIngredient) ||
                 const DeepCollectionEquality()
-                    .equals(other.idIngredient, idIngredient)) &&
-            (identical(other.strIngredient, strIngredient) ||
-                const DeepCollectionEquality()
-                    .equals(other.strIngredient, strIngredient)) &&
-            (identical(other.strDescription, strDescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.strDescription, strDescription)) &&
-            (identical(other.strType, strType) ||
-                const DeepCollectionEquality()
-                    .equals(other.strType, strType)) &&
-            (identical(other.strAlcohol, strAlcohol) ||
-                const DeepCollectionEquality()
-                    .equals(other.strAlcohol, strAlcohol)) &&
-            (identical(other.strAbv, strAbv) ||
-                const DeepCollectionEquality().equals(other.strAbv, strAbv)));
+                    .equals(other.idIngredient, idIngredient)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(idIngredient) ^
-      const DeepCollectionEquality().hash(strIngredient) ^
-      const DeepCollectionEquality().hash(strDescription) ^
-      const DeepCollectionEquality().hash(strType) ^
-      const DeepCollectionEquality().hash(strAlcohol) ^
-      const DeepCollectionEquality().hash(strAbv);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(idIngredient);
 
   @override
   _$IngredientsCopyWith<_Ingredients> get copyWith =>
@@ -213,29 +128,263 @@ class _$_Ingredients implements _Ingredients {
 }
 
 abstract class _Ingredients implements Ingredients {
-  const factory _Ingredients(
-      String idIngredient,
-      String strIngredient,
-      String strDescription,
-      String strType,
-      String strAlcohol,
-      String strAbv) = _$_Ingredients;
+  const factory _Ingredients(List<Ingredient> idIngredient) = _$_Ingredients;
 
   factory _Ingredients.fromJson(Map<String, dynamic> json) =
       _$_Ingredients.fromJson;
 
   @override
-  String get idIngredient;
-  @override
-  String get strIngredient;
-  @override
-  String get strDescription;
-  @override
-  String get strType;
-  @override
-  String get strAlcohol;
-  @override
-  String get strAbv;
+  List<Ingredient> get idIngredient;
   @override
   _$IngredientsCopyWith<_Ingredients> get copyWith;
+}
+
+Ingredient _$IngredientFromJson(Map<String, dynamic> json) {
+  return _Ingredient.fromJson(json);
+}
+
+class _$IngredientTearOff {
+  const _$IngredientTearOff();
+
+// ignore: unused_element
+  _Ingredient call(
+      @JsonKey(name: 'idIngredient') String id,
+      @JsonKey(name: 'strIngredient') String ingredient,
+      @JsonKey(name: 'strDescription') String description,
+      @JsonKey(name: 'strType') String type,
+      @JsonKey(name: 'strAlcohol') String alcohol,
+      @JsonKey(name: 'strAbv') String abv) {
+    return _Ingredient(
+      id,
+      ingredient,
+      description,
+      type,
+      alcohol,
+      abv,
+    );
+  }
+}
+
+// ignore: unused_element
+const $Ingredient = _$IngredientTearOff();
+
+mixin _$Ingredient {
+  @JsonKey(name: 'idIngredient')
+  String get id;
+  @JsonKey(name: 'strIngredient')
+  String get ingredient;
+  @JsonKey(name: 'strDescription')
+  String get description;
+  @JsonKey(name: 'strType')
+  String get type;
+  @JsonKey(name: 'strAlcohol')
+  String get alcohol;
+  @JsonKey(name: 'strAbv')
+  String get abv;
+
+  Map<String, dynamic> toJson();
+  $IngredientCopyWith<Ingredient> get copyWith;
+}
+
+abstract class $IngredientCopyWith<$Res> {
+  factory $IngredientCopyWith(
+          Ingredient value, $Res Function(Ingredient) then) =
+      _$IngredientCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'idIngredient') String id,
+      @JsonKey(name: 'strIngredient') String ingredient,
+      @JsonKey(name: 'strDescription') String description,
+      @JsonKey(name: 'strType') String type,
+      @JsonKey(name: 'strAlcohol') String alcohol,
+      @JsonKey(name: 'strAbv') String abv});
+}
+
+class _$IngredientCopyWithImpl<$Res> implements $IngredientCopyWith<$Res> {
+  _$IngredientCopyWithImpl(this._value, this._then);
+
+  final Ingredient _value;
+  // ignore: unused_field
+  final $Res Function(Ingredient) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object ingredient = freezed,
+    Object description = freezed,
+    Object type = freezed,
+    Object alcohol = freezed,
+    Object abv = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      ingredient:
+          ingredient == freezed ? _value.ingredient : ingredient as String,
+      description:
+          description == freezed ? _value.description : description as String,
+      type: type == freezed ? _value.type : type as String,
+      alcohol: alcohol == freezed ? _value.alcohol : alcohol as String,
+      abv: abv == freezed ? _value.abv : abv as String,
+    ));
+  }
+}
+
+abstract class _$IngredientCopyWith<$Res> implements $IngredientCopyWith<$Res> {
+  factory _$IngredientCopyWith(
+          _Ingredient value, $Res Function(_Ingredient) then) =
+      __$IngredientCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'idIngredient') String id,
+      @JsonKey(name: 'strIngredient') String ingredient,
+      @JsonKey(name: 'strDescription') String description,
+      @JsonKey(name: 'strType') String type,
+      @JsonKey(name: 'strAlcohol') String alcohol,
+      @JsonKey(name: 'strAbv') String abv});
+}
+
+class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
+    implements _$IngredientCopyWith<$Res> {
+  __$IngredientCopyWithImpl(
+      _Ingredient _value, $Res Function(_Ingredient) _then)
+      : super(_value, (v) => _then(v as _Ingredient));
+
+  @override
+  _Ingredient get _value => super._value as _Ingredient;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object ingredient = freezed,
+    Object description = freezed,
+    Object type = freezed,
+    Object alcohol = freezed,
+    Object abv = freezed,
+  }) {
+    return _then(_Ingredient(
+      id == freezed ? _value.id : id as String,
+      ingredient == freezed ? _value.ingredient : ingredient as String,
+      description == freezed ? _value.description : description as String,
+      type == freezed ? _value.type : type as String,
+      alcohol == freezed ? _value.alcohol : alcohol as String,
+      abv == freezed ? _value.abv : abv as String,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_Ingredient implements _Ingredient {
+  const _$_Ingredient(
+      @JsonKey(name: 'idIngredient') this.id,
+      @JsonKey(name: 'strIngredient') this.ingredient,
+      @JsonKey(name: 'strDescription') this.description,
+      @JsonKey(name: 'strType') this.type,
+      @JsonKey(name: 'strAlcohol') this.alcohol,
+      @JsonKey(name: 'strAbv') this.abv)
+      : assert(id != null),
+        assert(ingredient != null),
+        assert(description != null),
+        assert(type != null),
+        assert(alcohol != null),
+        assert(abv != null);
+
+  factory _$_Ingredient.fromJson(Map<String, dynamic> json) =>
+      _$_$_IngredientFromJson(json);
+
+  @override
+  @JsonKey(name: 'idIngredient')
+  final String id;
+  @override
+  @JsonKey(name: 'strIngredient')
+  final String ingredient;
+  @override
+  @JsonKey(name: 'strDescription')
+  final String description;
+  @override
+  @JsonKey(name: 'strType')
+  final String type;
+  @override
+  @JsonKey(name: 'strAlcohol')
+  final String alcohol;
+  @override
+  @JsonKey(name: 'strAbv')
+  final String abv;
+
+  @override
+  String toString() {
+    return 'Ingredient(id: $id, ingredient: $ingredient, description: $description, type: $type, alcohol: $alcohol, abv: $abv)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Ingredient &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.ingredient, ingredient) ||
+                const DeepCollectionEquality()
+                    .equals(other.ingredient, ingredient)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.alcohol, alcohol) ||
+                const DeepCollectionEquality()
+                    .equals(other.alcohol, alcohol)) &&
+            (identical(other.abv, abv) ||
+                const DeepCollectionEquality().equals(other.abv, abv)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(ingredient) ^
+      const DeepCollectionEquality().hash(description) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(alcohol) ^
+      const DeepCollectionEquality().hash(abv);
+
+  @override
+  _$IngredientCopyWith<_Ingredient> get copyWith =>
+      __$IngredientCopyWithImpl<_Ingredient>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_IngredientToJson(this);
+  }
+}
+
+abstract class _Ingredient implements Ingredient {
+  const factory _Ingredient(
+      @JsonKey(name: 'idIngredient') String id,
+      @JsonKey(name: 'strIngredient') String ingredient,
+      @JsonKey(name: 'strDescription') String description,
+      @JsonKey(name: 'strType') String type,
+      @JsonKey(name: 'strAlcohol') String alcohol,
+      @JsonKey(name: 'strAbv') String abv) = _$_Ingredient;
+
+  factory _Ingredient.fromJson(Map<String, dynamic> json) =
+      _$_Ingredient.fromJson;
+
+  @override
+  @JsonKey(name: 'idIngredient')
+  String get id;
+  @override
+  @JsonKey(name: 'strIngredient')
+  String get ingredient;
+  @override
+  @JsonKey(name: 'strDescription')
+  String get description;
+  @override
+  @JsonKey(name: 'strType')
+  String get type;
+  @override
+  @JsonKey(name: 'strAlcohol')
+  String get alcohol;
+  @override
+  @JsonKey(name: 'strAbv')
+  String get abv;
+  @override
+  _$IngredientCopyWith<_Ingredient> get copyWith;
 }
