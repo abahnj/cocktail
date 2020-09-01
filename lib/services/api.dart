@@ -6,7 +6,7 @@ class Api {
   static const String _apiEndpoint =
       'https://www.thecocktaildb.com/api/json/v1/1/';
 
-  var _dio = locator<Dio>();
+  final _dio = locator<Dio>();
 
   Future<Drinks> getDrink() async {
     var response = await _dio.get(

@@ -48,7 +48,7 @@ class MyHomePage extends HookWidget {
 
     api.getDrink().then((value) => log(value.drinks.first.toString()));
 
-    useProvider(character("")).when(data: null, loading: null, error: null);
+    useProvider(character('')).when(data: null, loading: null, error: null);
 
     return Scaffold(
       appBar: AppBar(

@@ -138,91 +138,91 @@ class _$DrinkTearOff {
 
 // ignore: unused_element
   _Drink call(
-      {String idDrink,
-      String strDrink,
-      String strDrinkAlternate,
-      String strTags,
-      String strVideo,
-      String strCategory,
-      String strIba,
-      String strAlcoholic,
-      String strGlass,
-      String strInstructions,
-      String strDrinkThumb,
-      String strIngredient1,
-      String strIngredient2,
-      String strIngredient3,
-      String strIngredient4,
-      String strIngredient5,
-      String strIngredient6,
-      String strIngredient7,
-      String strIngredient8,
-      String strIngredient9,
-      String strIngredient10,
-      String strIngredient11,
-      String strIngredient12,
-      String strIngredient13,
-      String strIngredient14,
-      String strIngredient15,
-      String strMeasure1,
-      String strMeasure2,
-      String strMeasure3,
-      String strMeasure4,
-      String strMeasure5,
-      String strMeasure6,
-      String strMeasure7,
-      String strMeasure8,
-      String strMeasure9,
-      String strMeasure10,
-      String strMeasure11,
-      String strMeasure12,
-      String strMeasure13,
-      String strMeasure14,
-      String strMeasure15,
+      {@JsonKey(name: 'idDrink') String id,
+      @JsonKey(name: 'strDrink') String name,
+      @JsonKey(name: 'strDrinkAlternate') String alternateName,
+      @JsonKey(name: 'strTags') String tags,
+      @JsonKey(name: 'strVideo') String video,
+      @JsonKey(name: 'strCategory') String category,
+      @JsonKey(name: 'strIBA,') String iba,
+      @JsonKey(name: 'strAlcoholic') String alcoholic,
+      @JsonKey(name: 'strGlass') String glass,
+      @JsonKey(name: 'strInstructions') String instructions,
+      @JsonKey(name: 'strDrinkThumb') String drinkThumb,
+      @JsonKey(name: 'strIngredient1') String ingredient1,
+      @JsonKey(name: 'strIngredient2') String ingredient2,
+      @JsonKey(name: 'strIngredient3') String ingredient3,
+      @JsonKey(name: 'strIngredient4') String ingredient4,
+      @JsonKey(name: 'strIngredient5') String ingredient5,
+      @JsonKey(name: 'strIngredient6') String ingredient6,
+      @JsonKey(name: 'strIngredient7') String ingredient7,
+      @JsonKey(name: 'strIngredient8') String ingredient8,
+      @JsonKey(name: 'strIngredient9') String ingredient9,
+      @JsonKey(name: 'strIngredient10') String ingredient10,
+      @JsonKey(name: 'strIngredient11') String ingredient11,
+      @JsonKey(name: 'strIngredient12') String ingredient12,
+      @JsonKey(name: 'strIngredient13') String ingredient13,
+      @JsonKey(name: 'strIngredient14') String ingredient14,
+      @JsonKey(name: 'strIngredient15') String ingredient15,
+      @JsonKey(name: 'strMeasure1') String measure1,
+      @JsonKey(name: 'strMeasure2') String measure2,
+      @JsonKey(name: 'strMeasure3') String measure3,
+      @JsonKey(name: 'strMeasure4') String measure4,
+      @JsonKey(name: 'strMeasure5') String measure5,
+      @JsonKey(name: 'strMeasure6') String measure6,
+      @JsonKey(name: 'strMeasure7') String measure7,
+      @JsonKey(name: 'strMeasure8') String measure8,
+      @JsonKey(name: 'strMeasure9') String measure9,
+      @JsonKey(name: 'strMeasure10') String measure10,
+      @JsonKey(name: 'strMeasure11') String measure11,
+      @JsonKey(name: 'strMeasure12') String measure12,
+      @JsonKey(name: 'strMeasure13') String measure13,
+      @JsonKey(name: 'strMeasure14') String measure14,
+      @JsonKey(name: 'strMeasure15') String measure15,
       String strCreativeCommonsConfirmed,
       DateTime dateModified}) {
     return _Drink(
-      idDrink: idDrink,
-      strDrink: strDrink,
-      strDrinkAlternate: strDrinkAlternate,
-      strTags: strTags,
-      strVideo: strVideo,
-      strCategory: strCategory,
-      strIba: strIba,
-      strAlcoholic: strAlcoholic,
-      strGlass: strGlass,
-      strInstructions: strInstructions,
-      strDrinkThumb: strDrinkThumb,
-      strIngredient1: strIngredient1,
-      strIngredient2: strIngredient2,
-      strIngredient3: strIngredient3,
-      strIngredient4: strIngredient4,
-      strIngredient5: strIngredient5,
-      strIngredient6: strIngredient6,
-      strIngredient7: strIngredient7,
-      strIngredient8: strIngredient8,
-      strIngredient9: strIngredient9,
-      strIngredient10: strIngredient10,
-      strIngredient11: strIngredient11,
-      strIngredient12: strIngredient12,
-      strIngredient13: strIngredient13,
-      strIngredient14: strIngredient14,
-      strIngredient15: strIngredient15,
-      strMeasure1: strMeasure1,
-      strMeasure2: strMeasure2,
-      strMeasure3: strMeasure3,
-      strMeasure4: strMeasure4,
-      strMeasure5: strMeasure5,
-      strMeasure6: strMeasure6,
-      strMeasure7: strMeasure7,
-      strMeasure8: strMeasure8,
-      strMeasure9: strMeasure9,
-      strMeasure10: strMeasure10,
-      strMeasure11: strMeasure11,
-      strMeasure12: strMeasure12,
-      strMeasure13: strMeasure13,
-      strMeasure14: strMeasure14,
-      strMeasure15: strMeasure15,
+      id: id,
+      name: name,
+      alternateName: alternateName,
+      tags: tags,
+      video: video,
+      category: category,
+      iba: iba,
+      alcoholic: alcoholic,
+      glass: glass,
+      instructions: instructions,
+      drinkThumb: drinkThumb,
+      ingredient1: ingredient1,
+      ingredient2: ingredient2,
+      ingredient3: ingredient3,
+      ingredient4: ingredient4,
+      ingredient5: ingredient5,
+      ingredient6: ingredient6,
+      ingredient7: ingredient7,
+      ingredient8: ingredient8,
+      ingredient9: ingredient9,
+      ingredient10: ingredient10,
+      ingredient11: ingredient11,
+      ingredient12: ingredient12,
+      ingredient13: ingredient13,
+      ingredient14: ingredient14,
+      ingredient15: ingredient15,
+      measure1: measure1,
+      measure2: measure2,
+      measure3: measure3,
+      measure4: measure4,
+      measure5: measure5,
+      measure6: measure6,
+      measure7: measure7,
+      measure8: measure8,
+      measure9: measure9,
+      measure10: measure10,
+      measure11: measure11,
+      measure12: measure12,
+      measure13: measure13,
+      measure14: measure14,
+      measure15: measure15,
       strCreativeCommonsConfirmed: strCreativeCommonsConfirmed,
       dateModified: dateModified,
     );
@@ -233,47 +233,88 @@ class _$DrinkTearOff {
 const $Drink = _$DrinkTearOff();
 
 mixin _$Drink {
-  String get idDrink;
-  String get strDrink;
-  String get strDrinkAlternate;
-  String get strTags;
-  String get strVideo;
-  String get strCategory;
-  String get strIba;
-  String get strAlcoholic;
-  String get strGlass;
-  String get strInstructions;
-  String get strDrinkThumb;
-  String get strIngredient1;
-  String get strIngredient2;
-  String get strIngredient3;
-  String get strIngredient4;
-  String get strIngredient5;
-  String get strIngredient6;
-  String get strIngredient7;
-  String get strIngredient8;
-  String get strIngredient9;
-  String get strIngredient10;
-  String get strIngredient11;
-  String get strIngredient12;
-  String get strIngredient13;
-  String get strIngredient14;
-  String get strIngredient15;
-  String get strMeasure1;
-  String get strMeasure2;
-  String get strMeasure3;
-  String get strMeasure4;
-  String get strMeasure5;
-  String get strMeasure6;
-  String get strMeasure7;
-  String get strMeasure8;
-  String get strMeasure9;
-  String get strMeasure10;
-  String get strMeasure11;
-  String get strMeasure12;
-  String get strMeasure13;
-  String get strMeasure14;
-  String get strMeasure15;
+  @JsonKey(name: 'idDrink')
+  String get id;
+  @JsonKey(name: 'strDrink')
+  String get name;
+  @JsonKey(name: 'strDrinkAlternate')
+  String get alternateName;
+  @JsonKey(name: 'strTags')
+  String get tags;
+  @JsonKey(name: 'strVideo')
+  String get video;
+  @JsonKey(name: 'strCategory')
+  String get category;
+  @JsonKey(name: 'strIBA,')
+  String get iba;
+  @JsonKey(name: 'strAlcoholic')
+  String get alcoholic;
+  @JsonKey(name: 'strGlass')
+  String get glass;
+  @JsonKey(name: 'strInstructions')
+  String get instructions;
+  @JsonKey(name: 'strDrinkThumb')
+  String get drinkThumb;
+  @JsonKey(name: 'strIngredient1')
+  String get ingredient1;
+  @JsonKey(name: 'strIngredient2')
+  String get ingredient2;
+  @JsonKey(name: 'strIngredient3')
+  String get ingredient3;
+  @JsonKey(name: 'strIngredient4')
+  String get ingredient4;
+  @JsonKey(name: 'strIngredient5')
+  String get ingredient5;
+  @JsonKey(name: 'strIngredient6')
+  String get ingredient6;
+  @JsonKey(name: 'strIngredient7')
+  String get ingredient7;
+  @JsonKey(name: 'strIngredient8')
+  String get ingredient8;
+  @JsonKey(name: 'strIngredient9')
+  String get ingredient9;
+  @JsonKey(name: 'strIngredient10')
+  String get ingredient10;
+  @JsonKey(name: 'strIngredient11')
+  String get ingredient11;
+  @JsonKey(name: 'strIngredient12')
+  String get ingredient12;
+  @JsonKey(name: 'strIngredient13')
+  String get ingredient13;
+  @JsonKey(name: 'strIngredient14')
+  String get ingredient14;
+  @JsonKey(name: 'strIngredient15')
+  String get ingredient15;
+  @JsonKey(name: 'strMeasure1')
+  String get measure1;
+  @JsonKey(name: 'strMeasure2')
+  String get measure2;
+  @JsonKey(name: 'strMeasure3')
+  String get measure3;
+  @JsonKey(name: 'strMeasure4')
+  String get measure4;
+  @JsonKey(name: 'strMeasure5')
+  String get measure5;
+  @JsonKey(name: 'strMeasure6')
+  String get measure6;
+  @JsonKey(name: 'strMeasure7')
+  String get measure7;
+  @JsonKey(name: 'strMeasure8')
+  String get measure8;
+  @JsonKey(name: 'strMeasure9')
+  String get measure9;
+  @JsonKey(name: 'strMeasure10')
+  String get measure10;
+  @JsonKey(name: 'strMeasure11')
+  String get measure11;
+  @JsonKey(name: 'strMeasure12')
+  String get measure12;
+  @JsonKey(name: 'strMeasure13')
+  String get measure13;
+  @JsonKey(name: 'strMeasure14')
+  String get measure14;
+  @JsonKey(name: 'strMeasure15')
+  String get measure15;
   String get strCreativeCommonsConfirmed;
   DateTime get dateModified;
 
@@ -285,47 +326,47 @@ abstract class $DrinkCopyWith<$Res> {
   factory $DrinkCopyWith(Drink value, $Res Function(Drink) then) =
       _$DrinkCopyWithImpl<$Res>;
   $Res call(
-      {String idDrink,
-      String strDrink,
-      String strDrinkAlternate,
-      String strTags,
-      String strVideo,
-      String strCategory,
-      String strIba,
-      String strAlcoholic,
-      String strGlass,
-      String strInstructions,
-      String strDrinkThumb,
-      String strIngredient1,
-      String strIngredient2,
-      String strIngredient3,
-      String strIngredient4,
-      String strIngredient5,
-      String strIngredient6,
-      String strIngredient7,
-      String strIngredient8,
-      String strIngredient9,
-      String strIngredient10,
-      String strIngredient11,
-      String strIngredient12,
-      String strIngredient13,
-      String strIngredient14,
-      String strIngredient15,
-      String strMeasure1,
-      String strMeasure2,
-      String strMeasure3,
-      String strMeasure4,
-      String strMeasure5,
-      String strMeasure6,
-      String strMeasure7,
-      String strMeasure8,
-      String strMeasure9,
-      String strMeasure10,
-      String strMeasure11,
-      String strMeasure12,
-      String strMeasure13,
-      String strMeasure14,
-      String strMeasure15,
+      {@JsonKey(name: 'idDrink') String id,
+      @JsonKey(name: 'strDrink') String name,
+      @JsonKey(name: 'strDrinkAlternate') String alternateName,
+      @JsonKey(name: 'strTags') String tags,
+      @JsonKey(name: 'strVideo') String video,
+      @JsonKey(name: 'strCategory') String category,
+      @JsonKey(name: 'strIBA,') String iba,
+      @JsonKey(name: 'strAlcoholic') String alcoholic,
+      @JsonKey(name: 'strGlass') String glass,
+      @JsonKey(name: 'strInstructions') String instructions,
+      @JsonKey(name: 'strDrinkThumb') String drinkThumb,
+      @JsonKey(name: 'strIngredient1') String ingredient1,
+      @JsonKey(name: 'strIngredient2') String ingredient2,
+      @JsonKey(name: 'strIngredient3') String ingredient3,
+      @JsonKey(name: 'strIngredient4') String ingredient4,
+      @JsonKey(name: 'strIngredient5') String ingredient5,
+      @JsonKey(name: 'strIngredient6') String ingredient6,
+      @JsonKey(name: 'strIngredient7') String ingredient7,
+      @JsonKey(name: 'strIngredient8') String ingredient8,
+      @JsonKey(name: 'strIngredient9') String ingredient9,
+      @JsonKey(name: 'strIngredient10') String ingredient10,
+      @JsonKey(name: 'strIngredient11') String ingredient11,
+      @JsonKey(name: 'strIngredient12') String ingredient12,
+      @JsonKey(name: 'strIngredient13') String ingredient13,
+      @JsonKey(name: 'strIngredient14') String ingredient14,
+      @JsonKey(name: 'strIngredient15') String ingredient15,
+      @JsonKey(name: 'strMeasure1') String measure1,
+      @JsonKey(name: 'strMeasure2') String measure2,
+      @JsonKey(name: 'strMeasure3') String measure3,
+      @JsonKey(name: 'strMeasure4') String measure4,
+      @JsonKey(name: 'strMeasure5') String measure5,
+      @JsonKey(name: 'strMeasure6') String measure6,
+      @JsonKey(name: 'strMeasure7') String measure7,
+      @JsonKey(name: 'strMeasure8') String measure8,
+      @JsonKey(name: 'strMeasure9') String measure9,
+      @JsonKey(name: 'strMeasure10') String measure10,
+      @JsonKey(name: 'strMeasure11') String measure11,
+      @JsonKey(name: 'strMeasure12') String measure12,
+      @JsonKey(name: 'strMeasure13') String measure13,
+      @JsonKey(name: 'strMeasure14') String measure14,
+      @JsonKey(name: 'strMeasure15') String measure15,
       String strCreativeCommonsConfirmed,
       DateTime dateModified});
 }
@@ -339,152 +380,118 @@ class _$DrinkCopyWithImpl<$Res> implements $DrinkCopyWith<$Res> {
 
   @override
   $Res call({
-    Object idDrink = freezed,
-    Object strDrink = freezed,
-    Object strDrinkAlternate = freezed,
-    Object strTags = freezed,
-    Object strVideo = freezed,
-    Object strCategory = freezed,
-    Object strIba = freezed,
-    Object strAlcoholic = freezed,
-    Object strGlass = freezed,
-    Object strInstructions = freezed,
-    Object strDrinkThumb = freezed,
-    Object strIngredient1 = freezed,
-    Object strIngredient2 = freezed,
-    Object strIngredient3 = freezed,
-    Object strIngredient4 = freezed,
-    Object strIngredient5 = freezed,
-    Object strIngredient6 = freezed,
-    Object strIngredient7 = freezed,
-    Object strIngredient8 = freezed,
-    Object strIngredient9 = freezed,
-    Object strIngredient10 = freezed,
-    Object strIngredient11 = freezed,
-    Object strIngredient12 = freezed,
-    Object strIngredient13 = freezed,
-    Object strIngredient14 = freezed,
-    Object strIngredient15 = freezed,
-    Object strMeasure1 = freezed,
-    Object strMeasure2 = freezed,
-    Object strMeasure3 = freezed,
-    Object strMeasure4 = freezed,
-    Object strMeasure5 = freezed,
-    Object strMeasure6 = freezed,
-    Object strMeasure7 = freezed,
-    Object strMeasure8 = freezed,
-    Object strMeasure9 = freezed,
-    Object strMeasure10 = freezed,
-    Object strMeasure11 = freezed,
-    Object strMeasure12 = freezed,
-    Object strMeasure13 = freezed,
-    Object strMeasure14 = freezed,
-    Object strMeasure15 = freezed,
+    Object id = freezed,
+    Object name = freezed,
+    Object alternateName = freezed,
+    Object tags = freezed,
+    Object video = freezed,
+    Object category = freezed,
+    Object iba = freezed,
+    Object alcoholic = freezed,
+    Object glass = freezed,
+    Object instructions = freezed,
+    Object drinkThumb = freezed,
+    Object ingredient1 = freezed,
+    Object ingredient2 = freezed,
+    Object ingredient3 = freezed,
+    Object ingredient4 = freezed,
+    Object ingredient5 = freezed,
+    Object ingredient6 = freezed,
+    Object ingredient7 = freezed,
+    Object ingredient8 = freezed,
+    Object ingredient9 = freezed,
+    Object ingredient10 = freezed,
+    Object ingredient11 = freezed,
+    Object ingredient12 = freezed,
+    Object ingredient13 = freezed,
+    Object ingredient14 = freezed,
+    Object ingredient15 = freezed,
+    Object measure1 = freezed,
+    Object measure2 = freezed,
+    Object measure3 = freezed,
+    Object measure4 = freezed,
+    Object measure5 = freezed,
+    Object measure6 = freezed,
+    Object measure7 = freezed,
+    Object measure8 = freezed,
+    Object measure9 = freezed,
+    Object measure10 = freezed,
+    Object measure11 = freezed,
+    Object measure12 = freezed,
+    Object measure13 = freezed,
+    Object measure14 = freezed,
+    Object measure15 = freezed,
     Object strCreativeCommonsConfirmed = freezed,
     Object dateModified = freezed,
   }) {
     return _then(_value.copyWith(
-      idDrink: idDrink == freezed ? _value.idDrink : idDrink as String,
-      strDrink: strDrink == freezed ? _value.strDrink : strDrink as String,
-      strDrinkAlternate: strDrinkAlternate == freezed
-          ? _value.strDrinkAlternate
-          : strDrinkAlternate as String,
-      strTags: strTags == freezed ? _value.strTags : strTags as String,
-      strVideo: strVideo == freezed ? _value.strVideo : strVideo as String,
-      strCategory:
-          strCategory == freezed ? _value.strCategory : strCategory as String,
-      strIba: strIba == freezed ? _value.strIba : strIba as String,
-      strAlcoholic: strAlcoholic == freezed
-          ? _value.strAlcoholic
-          : strAlcoholic as String,
-      strGlass: strGlass == freezed ? _value.strGlass : strGlass as String,
-      strInstructions: strInstructions == freezed
-          ? _value.strInstructions
-          : strInstructions as String,
-      strDrinkThumb: strDrinkThumb == freezed
-          ? _value.strDrinkThumb
-          : strDrinkThumb as String,
-      strIngredient1: strIngredient1 == freezed
-          ? _value.strIngredient1
-          : strIngredient1 as String,
-      strIngredient2: strIngredient2 == freezed
-          ? _value.strIngredient2
-          : strIngredient2 as String,
-      strIngredient3: strIngredient3 == freezed
-          ? _value.strIngredient3
-          : strIngredient3 as String,
-      strIngredient4: strIngredient4 == freezed
-          ? _value.strIngredient4
-          : strIngredient4 as String,
-      strIngredient5: strIngredient5 == freezed
-          ? _value.strIngredient5
-          : strIngredient5 as String,
-      strIngredient6: strIngredient6 == freezed
-          ? _value.strIngredient6
-          : strIngredient6 as String,
-      strIngredient7: strIngredient7 == freezed
-          ? _value.strIngredient7
-          : strIngredient7 as String,
-      strIngredient8: strIngredient8 == freezed
-          ? _value.strIngredient8
-          : strIngredient8 as String,
-      strIngredient9: strIngredient9 == freezed
-          ? _value.strIngredient9
-          : strIngredient9 as String,
-      strIngredient10: strIngredient10 == freezed
-          ? _value.strIngredient10
-          : strIngredient10 as String,
-      strIngredient11: strIngredient11 == freezed
-          ? _value.strIngredient11
-          : strIngredient11 as String,
-      strIngredient12: strIngredient12 == freezed
-          ? _value.strIngredient12
-          : strIngredient12 as String,
-      strIngredient13: strIngredient13 == freezed
-          ? _value.strIngredient13
-          : strIngredient13 as String,
-      strIngredient14: strIngredient14 == freezed
-          ? _value.strIngredient14
-          : strIngredient14 as String,
-      strIngredient15: strIngredient15 == freezed
-          ? _value.strIngredient15
-          : strIngredient15 as String,
-      strMeasure1:
-          strMeasure1 == freezed ? _value.strMeasure1 : strMeasure1 as String,
-      strMeasure2:
-          strMeasure2 == freezed ? _value.strMeasure2 : strMeasure2 as String,
-      strMeasure3:
-          strMeasure3 == freezed ? _value.strMeasure3 : strMeasure3 as String,
-      strMeasure4:
-          strMeasure4 == freezed ? _value.strMeasure4 : strMeasure4 as String,
-      strMeasure5:
-          strMeasure5 == freezed ? _value.strMeasure5 : strMeasure5 as String,
-      strMeasure6:
-          strMeasure6 == freezed ? _value.strMeasure6 : strMeasure6 as String,
-      strMeasure7:
-          strMeasure7 == freezed ? _value.strMeasure7 : strMeasure7 as String,
-      strMeasure8:
-          strMeasure8 == freezed ? _value.strMeasure8 : strMeasure8 as String,
-      strMeasure9:
-          strMeasure9 == freezed ? _value.strMeasure9 : strMeasure9 as String,
-      strMeasure10: strMeasure10 == freezed
-          ? _value.strMeasure10
-          : strMeasure10 as String,
-      strMeasure11: strMeasure11 == freezed
-          ? _value.strMeasure11
-          : strMeasure11 as String,
-      strMeasure12: strMeasure12 == freezed
-          ? _value.strMeasure12
-          : strMeasure12 as String,
-      strMeasure13: strMeasure13 == freezed
-          ? _value.strMeasure13
-          : strMeasure13 as String,
-      strMeasure14: strMeasure14 == freezed
-          ? _value.strMeasure14
-          : strMeasure14 as String,
-      strMeasure15: strMeasure15 == freezed
-          ? _value.strMeasure15
-          : strMeasure15 as String,
+      id: id == freezed ? _value.id : id as String,
+      name: name == freezed ? _value.name : name as String,
+      alternateName: alternateName == freezed
+          ? _value.alternateName
+          : alternateName as String,
+      tags: tags == freezed ? _value.tags : tags as String,
+      video: video == freezed ? _value.video : video as String,
+      category: category == freezed ? _value.category : category as String,
+      iba: iba == freezed ? _value.iba : iba as String,
+      alcoholic: alcoholic == freezed ? _value.alcoholic : alcoholic as String,
+      glass: glass == freezed ? _value.glass : glass as String,
+      instructions: instructions == freezed
+          ? _value.instructions
+          : instructions as String,
+      drinkThumb:
+          drinkThumb == freezed ? _value.drinkThumb : drinkThumb as String,
+      ingredient1:
+          ingredient1 == freezed ? _value.ingredient1 : ingredient1 as String,
+      ingredient2:
+          ingredient2 == freezed ? _value.ingredient2 : ingredient2 as String,
+      ingredient3:
+          ingredient3 == freezed ? _value.ingredient3 : ingredient3 as String,
+      ingredient4:
+          ingredient4 == freezed ? _value.ingredient4 : ingredient4 as String,
+      ingredient5:
+          ingredient5 == freezed ? _value.ingredient5 : ingredient5 as String,
+      ingredient6:
+          ingredient6 == freezed ? _value.ingredient6 : ingredient6 as String,
+      ingredient7:
+          ingredient7 == freezed ? _value.ingredient7 : ingredient7 as String,
+      ingredient8:
+          ingredient8 == freezed ? _value.ingredient8 : ingredient8 as String,
+      ingredient9:
+          ingredient9 == freezed ? _value.ingredient9 : ingredient9 as String,
+      ingredient10: ingredient10 == freezed
+          ? _value.ingredient10
+          : ingredient10 as String,
+      ingredient11: ingredient11 == freezed
+          ? _value.ingredient11
+          : ingredient11 as String,
+      ingredient12: ingredient12 == freezed
+          ? _value.ingredient12
+          : ingredient12 as String,
+      ingredient13: ingredient13 == freezed
+          ? _value.ingredient13
+          : ingredient13 as String,
+      ingredient14: ingredient14 == freezed
+          ? _value.ingredient14
+          : ingredient14 as String,
+      ingredient15: ingredient15 == freezed
+          ? _value.ingredient15
+          : ingredient15 as String,
+      measure1: measure1 == freezed ? _value.measure1 : measure1 as String,
+      measure2: measure2 == freezed ? _value.measure2 : measure2 as String,
+      measure3: measure3 == freezed ? _value.measure3 : measure3 as String,
+      measure4: measure4 == freezed ? _value.measure4 : measure4 as String,
+      measure5: measure5 == freezed ? _value.measure5 : measure5 as String,
+      measure6: measure6 == freezed ? _value.measure6 : measure6 as String,
+      measure7: measure7 == freezed ? _value.measure7 : measure7 as String,
+      measure8: measure8 == freezed ? _value.measure8 : measure8 as String,
+      measure9: measure9 == freezed ? _value.measure9 : measure9 as String,
+      measure10: measure10 == freezed ? _value.measure10 : measure10 as String,
+      measure11: measure11 == freezed ? _value.measure11 : measure11 as String,
+      measure12: measure12 == freezed ? _value.measure12 : measure12 as String,
+      measure13: measure13 == freezed ? _value.measure13 : measure13 as String,
+      measure14: measure14 == freezed ? _value.measure14 : measure14 as String,
+      measure15: measure15 == freezed ? _value.measure15 : measure15 as String,
       strCreativeCommonsConfirmed: strCreativeCommonsConfirmed == freezed
           ? _value.strCreativeCommonsConfirmed
           : strCreativeCommonsConfirmed as String,
@@ -500,47 +507,47 @@ abstract class _$DrinkCopyWith<$Res> implements $DrinkCopyWith<$Res> {
       __$DrinkCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String idDrink,
-      String strDrink,
-      String strDrinkAlternate,
-      String strTags,
-      String strVideo,
-      String strCategory,
-      String strIba,
-      String strAlcoholic,
-      String strGlass,
-      String strInstructions,
-      String strDrinkThumb,
-      String strIngredient1,
-      String strIngredient2,
-      String strIngredient3,
-      String strIngredient4,
-      String strIngredient5,
-      String strIngredient6,
-      String strIngredient7,
-      String strIngredient8,
-      String strIngredient9,
-      String strIngredient10,
-      String strIngredient11,
-      String strIngredient12,
-      String strIngredient13,
-      String strIngredient14,
-      String strIngredient15,
-      String strMeasure1,
-      String strMeasure2,
-      String strMeasure3,
-      String strMeasure4,
-      String strMeasure5,
-      String strMeasure6,
-      String strMeasure7,
-      String strMeasure8,
-      String strMeasure9,
-      String strMeasure10,
-      String strMeasure11,
-      String strMeasure12,
-      String strMeasure13,
-      String strMeasure14,
-      String strMeasure15,
+      {@JsonKey(name: 'idDrink') String id,
+      @JsonKey(name: 'strDrink') String name,
+      @JsonKey(name: 'strDrinkAlternate') String alternateName,
+      @JsonKey(name: 'strTags') String tags,
+      @JsonKey(name: 'strVideo') String video,
+      @JsonKey(name: 'strCategory') String category,
+      @JsonKey(name: 'strIBA,') String iba,
+      @JsonKey(name: 'strAlcoholic') String alcoholic,
+      @JsonKey(name: 'strGlass') String glass,
+      @JsonKey(name: 'strInstructions') String instructions,
+      @JsonKey(name: 'strDrinkThumb') String drinkThumb,
+      @JsonKey(name: 'strIngredient1') String ingredient1,
+      @JsonKey(name: 'strIngredient2') String ingredient2,
+      @JsonKey(name: 'strIngredient3') String ingredient3,
+      @JsonKey(name: 'strIngredient4') String ingredient4,
+      @JsonKey(name: 'strIngredient5') String ingredient5,
+      @JsonKey(name: 'strIngredient6') String ingredient6,
+      @JsonKey(name: 'strIngredient7') String ingredient7,
+      @JsonKey(name: 'strIngredient8') String ingredient8,
+      @JsonKey(name: 'strIngredient9') String ingredient9,
+      @JsonKey(name: 'strIngredient10') String ingredient10,
+      @JsonKey(name: 'strIngredient11') String ingredient11,
+      @JsonKey(name: 'strIngredient12') String ingredient12,
+      @JsonKey(name: 'strIngredient13') String ingredient13,
+      @JsonKey(name: 'strIngredient14') String ingredient14,
+      @JsonKey(name: 'strIngredient15') String ingredient15,
+      @JsonKey(name: 'strMeasure1') String measure1,
+      @JsonKey(name: 'strMeasure2') String measure2,
+      @JsonKey(name: 'strMeasure3') String measure3,
+      @JsonKey(name: 'strMeasure4') String measure4,
+      @JsonKey(name: 'strMeasure5') String measure5,
+      @JsonKey(name: 'strMeasure6') String measure6,
+      @JsonKey(name: 'strMeasure7') String measure7,
+      @JsonKey(name: 'strMeasure8') String measure8,
+      @JsonKey(name: 'strMeasure9') String measure9,
+      @JsonKey(name: 'strMeasure10') String measure10,
+      @JsonKey(name: 'strMeasure11') String measure11,
+      @JsonKey(name: 'strMeasure12') String measure12,
+      @JsonKey(name: 'strMeasure13') String measure13,
+      @JsonKey(name: 'strMeasure14') String measure14,
+      @JsonKey(name: 'strMeasure15') String measure15,
       String strCreativeCommonsConfirmed,
       DateTime dateModified});
 }
@@ -555,152 +562,118 @@ class __$DrinkCopyWithImpl<$Res> extends _$DrinkCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object idDrink = freezed,
-    Object strDrink = freezed,
-    Object strDrinkAlternate = freezed,
-    Object strTags = freezed,
-    Object strVideo = freezed,
-    Object strCategory = freezed,
-    Object strIba = freezed,
-    Object strAlcoholic = freezed,
-    Object strGlass = freezed,
-    Object strInstructions = freezed,
-    Object strDrinkThumb = freezed,
-    Object strIngredient1 = freezed,
-    Object strIngredient2 = freezed,
-    Object strIngredient3 = freezed,
-    Object strIngredient4 = freezed,
-    Object strIngredient5 = freezed,
-    Object strIngredient6 = freezed,
-    Object strIngredient7 = freezed,
-    Object strIngredient8 = freezed,
-    Object strIngredient9 = freezed,
-    Object strIngredient10 = freezed,
-    Object strIngredient11 = freezed,
-    Object strIngredient12 = freezed,
-    Object strIngredient13 = freezed,
-    Object strIngredient14 = freezed,
-    Object strIngredient15 = freezed,
-    Object strMeasure1 = freezed,
-    Object strMeasure2 = freezed,
-    Object strMeasure3 = freezed,
-    Object strMeasure4 = freezed,
-    Object strMeasure5 = freezed,
-    Object strMeasure6 = freezed,
-    Object strMeasure7 = freezed,
-    Object strMeasure8 = freezed,
-    Object strMeasure9 = freezed,
-    Object strMeasure10 = freezed,
-    Object strMeasure11 = freezed,
-    Object strMeasure12 = freezed,
-    Object strMeasure13 = freezed,
-    Object strMeasure14 = freezed,
-    Object strMeasure15 = freezed,
+    Object id = freezed,
+    Object name = freezed,
+    Object alternateName = freezed,
+    Object tags = freezed,
+    Object video = freezed,
+    Object category = freezed,
+    Object iba = freezed,
+    Object alcoholic = freezed,
+    Object glass = freezed,
+    Object instructions = freezed,
+    Object drinkThumb = freezed,
+    Object ingredient1 = freezed,
+    Object ingredient2 = freezed,
+    Object ingredient3 = freezed,
+    Object ingredient4 = freezed,
+    Object ingredient5 = freezed,
+    Object ingredient6 = freezed,
+    Object ingredient7 = freezed,
+    Object ingredient8 = freezed,
+    Object ingredient9 = freezed,
+    Object ingredient10 = freezed,
+    Object ingredient11 = freezed,
+    Object ingredient12 = freezed,
+    Object ingredient13 = freezed,
+    Object ingredient14 = freezed,
+    Object ingredient15 = freezed,
+    Object measure1 = freezed,
+    Object measure2 = freezed,
+    Object measure3 = freezed,
+    Object measure4 = freezed,
+    Object measure5 = freezed,
+    Object measure6 = freezed,
+    Object measure7 = freezed,
+    Object measure8 = freezed,
+    Object measure9 = freezed,
+    Object measure10 = freezed,
+    Object measure11 = freezed,
+    Object measure12 = freezed,
+    Object measure13 = freezed,
+    Object measure14 = freezed,
+    Object measure15 = freezed,
     Object strCreativeCommonsConfirmed = freezed,
     Object dateModified = freezed,
   }) {
     return _then(_Drink(
-      idDrink: idDrink == freezed ? _value.idDrink : idDrink as String,
-      strDrink: strDrink == freezed ? _value.strDrink : strDrink as String,
-      strDrinkAlternate: strDrinkAlternate == freezed
-          ? _value.strDrinkAlternate
-          : strDrinkAlternate as String,
-      strTags: strTags == freezed ? _value.strTags : strTags as String,
-      strVideo: strVideo == freezed ? _value.strVideo : strVideo as String,
-      strCategory:
-          strCategory == freezed ? _value.strCategory : strCategory as String,
-      strIba: strIba == freezed ? _value.strIba : strIba as String,
-      strAlcoholic: strAlcoholic == freezed
-          ? _value.strAlcoholic
-          : strAlcoholic as String,
-      strGlass: strGlass == freezed ? _value.strGlass : strGlass as String,
-      strInstructions: strInstructions == freezed
-          ? _value.strInstructions
-          : strInstructions as String,
-      strDrinkThumb: strDrinkThumb == freezed
-          ? _value.strDrinkThumb
-          : strDrinkThumb as String,
-      strIngredient1: strIngredient1 == freezed
-          ? _value.strIngredient1
-          : strIngredient1 as String,
-      strIngredient2: strIngredient2 == freezed
-          ? _value.strIngredient2
-          : strIngredient2 as String,
-      strIngredient3: strIngredient3 == freezed
-          ? _value.strIngredient3
-          : strIngredient3 as String,
-      strIngredient4: strIngredient4 == freezed
-          ? _value.strIngredient4
-          : strIngredient4 as String,
-      strIngredient5: strIngredient5 == freezed
-          ? _value.strIngredient5
-          : strIngredient5 as String,
-      strIngredient6: strIngredient6 == freezed
-          ? _value.strIngredient6
-          : strIngredient6 as String,
-      strIngredient7: strIngredient7 == freezed
-          ? _value.strIngredient7
-          : strIngredient7 as String,
-      strIngredient8: strIngredient8 == freezed
-          ? _value.strIngredient8
-          : strIngredient8 as String,
-      strIngredient9: strIngredient9 == freezed
-          ? _value.strIngredient9
-          : strIngredient9 as String,
-      strIngredient10: strIngredient10 == freezed
-          ? _value.strIngredient10
-          : strIngredient10 as String,
-      strIngredient11: strIngredient11 == freezed
-          ? _value.strIngredient11
-          : strIngredient11 as String,
-      strIngredient12: strIngredient12 == freezed
-          ? _value.strIngredient12
-          : strIngredient12 as String,
-      strIngredient13: strIngredient13 == freezed
-          ? _value.strIngredient13
-          : strIngredient13 as String,
-      strIngredient14: strIngredient14 == freezed
-          ? _value.strIngredient14
-          : strIngredient14 as String,
-      strIngredient15: strIngredient15 == freezed
-          ? _value.strIngredient15
-          : strIngredient15 as String,
-      strMeasure1:
-          strMeasure1 == freezed ? _value.strMeasure1 : strMeasure1 as String,
-      strMeasure2:
-          strMeasure2 == freezed ? _value.strMeasure2 : strMeasure2 as String,
-      strMeasure3:
-          strMeasure3 == freezed ? _value.strMeasure3 : strMeasure3 as String,
-      strMeasure4:
-          strMeasure4 == freezed ? _value.strMeasure4 : strMeasure4 as String,
-      strMeasure5:
-          strMeasure5 == freezed ? _value.strMeasure5 : strMeasure5 as String,
-      strMeasure6:
-          strMeasure6 == freezed ? _value.strMeasure6 : strMeasure6 as String,
-      strMeasure7:
-          strMeasure7 == freezed ? _value.strMeasure7 : strMeasure7 as String,
-      strMeasure8:
-          strMeasure8 == freezed ? _value.strMeasure8 : strMeasure8 as String,
-      strMeasure9:
-          strMeasure9 == freezed ? _value.strMeasure9 : strMeasure9 as String,
-      strMeasure10: strMeasure10 == freezed
-          ? _value.strMeasure10
-          : strMeasure10 as String,
-      strMeasure11: strMeasure11 == freezed
-          ? _value.strMeasure11
-          : strMeasure11 as String,
-      strMeasure12: strMeasure12 == freezed
-          ? _value.strMeasure12
-          : strMeasure12 as String,
-      strMeasure13: strMeasure13 == freezed
-          ? _value.strMeasure13
-          : strMeasure13 as String,
-      strMeasure14: strMeasure14 == freezed
-          ? _value.strMeasure14
-          : strMeasure14 as String,
-      strMeasure15: strMeasure15 == freezed
-          ? _value.strMeasure15
-          : strMeasure15 as String,
+      id: id == freezed ? _value.id : id as String,
+      name: name == freezed ? _value.name : name as String,
+      alternateName: alternateName == freezed
+          ? _value.alternateName
+          : alternateName as String,
+      tags: tags == freezed ? _value.tags : tags as String,
+      video: video == freezed ? _value.video : video as String,
+      category: category == freezed ? _value.category : category as String,
+      iba: iba == freezed ? _value.iba : iba as String,
+      alcoholic: alcoholic == freezed ? _value.alcoholic : alcoholic as String,
+      glass: glass == freezed ? _value.glass : glass as String,
+      instructions: instructions == freezed
+          ? _value.instructions
+          : instructions as String,
+      drinkThumb:
+          drinkThumb == freezed ? _value.drinkThumb : drinkThumb as String,
+      ingredient1:
+          ingredient1 == freezed ? _value.ingredient1 : ingredient1 as String,
+      ingredient2:
+          ingredient2 == freezed ? _value.ingredient2 : ingredient2 as String,
+      ingredient3:
+          ingredient3 == freezed ? _value.ingredient3 : ingredient3 as String,
+      ingredient4:
+          ingredient4 == freezed ? _value.ingredient4 : ingredient4 as String,
+      ingredient5:
+          ingredient5 == freezed ? _value.ingredient5 : ingredient5 as String,
+      ingredient6:
+          ingredient6 == freezed ? _value.ingredient6 : ingredient6 as String,
+      ingredient7:
+          ingredient7 == freezed ? _value.ingredient7 : ingredient7 as String,
+      ingredient8:
+          ingredient8 == freezed ? _value.ingredient8 : ingredient8 as String,
+      ingredient9:
+          ingredient9 == freezed ? _value.ingredient9 : ingredient9 as String,
+      ingredient10: ingredient10 == freezed
+          ? _value.ingredient10
+          : ingredient10 as String,
+      ingredient11: ingredient11 == freezed
+          ? _value.ingredient11
+          : ingredient11 as String,
+      ingredient12: ingredient12 == freezed
+          ? _value.ingredient12
+          : ingredient12 as String,
+      ingredient13: ingredient13 == freezed
+          ? _value.ingredient13
+          : ingredient13 as String,
+      ingredient14: ingredient14 == freezed
+          ? _value.ingredient14
+          : ingredient14 as String,
+      ingredient15: ingredient15 == freezed
+          ? _value.ingredient15
+          : ingredient15 as String,
+      measure1: measure1 == freezed ? _value.measure1 : measure1 as String,
+      measure2: measure2 == freezed ? _value.measure2 : measure2 as String,
+      measure3: measure3 == freezed ? _value.measure3 : measure3 as String,
+      measure4: measure4 == freezed ? _value.measure4 : measure4 as String,
+      measure5: measure5 == freezed ? _value.measure5 : measure5 as String,
+      measure6: measure6 == freezed ? _value.measure6 : measure6 as String,
+      measure7: measure7 == freezed ? _value.measure7 : measure7 as String,
+      measure8: measure8 == freezed ? _value.measure8 : measure8 as String,
+      measure9: measure9 == freezed ? _value.measure9 : measure9 as String,
+      measure10: measure10 == freezed ? _value.measure10 : measure10 as String,
+      measure11: measure11 == freezed ? _value.measure11 : measure11 as String,
+      measure12: measure12 == freezed ? _value.measure12 : measure12 as String,
+      measure13: measure13 == freezed ? _value.measure13 : measure13 as String,
+      measure14: measure14 == freezed ? _value.measure14 : measure14 as String,
+      measure15: measure15 == freezed ? _value.measure15 : measure15 as String,
       strCreativeCommonsConfirmed: strCreativeCommonsConfirmed == freezed
           ? _value.strCreativeCommonsConfirmed
           : strCreativeCommonsConfirmed as String,
@@ -714,47 +687,47 @@ class __$DrinkCopyWithImpl<$Res> extends _$DrinkCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Drink implements _Drink {
   const _$_Drink(
-      {this.idDrink,
-      this.strDrink,
-      this.strDrinkAlternate,
-      this.strTags,
-      this.strVideo,
-      this.strCategory,
-      this.strIba,
-      this.strAlcoholic,
-      this.strGlass,
-      this.strInstructions,
-      this.strDrinkThumb,
-      this.strIngredient1,
-      this.strIngredient2,
-      this.strIngredient3,
-      this.strIngredient4,
-      this.strIngredient5,
-      this.strIngredient6,
-      this.strIngredient7,
-      this.strIngredient8,
-      this.strIngredient9,
-      this.strIngredient10,
-      this.strIngredient11,
-      this.strIngredient12,
-      this.strIngredient13,
-      this.strIngredient14,
-      this.strIngredient15,
-      this.strMeasure1,
-      this.strMeasure2,
-      this.strMeasure3,
-      this.strMeasure4,
-      this.strMeasure5,
-      this.strMeasure6,
-      this.strMeasure7,
-      this.strMeasure8,
-      this.strMeasure9,
-      this.strMeasure10,
-      this.strMeasure11,
-      this.strMeasure12,
-      this.strMeasure13,
-      this.strMeasure14,
-      this.strMeasure15,
+      {@JsonKey(name: 'idDrink') this.id,
+      @JsonKey(name: 'strDrink') this.name,
+      @JsonKey(name: 'strDrinkAlternate') this.alternateName,
+      @JsonKey(name: 'strTags') this.tags,
+      @JsonKey(name: 'strVideo') this.video,
+      @JsonKey(name: 'strCategory') this.category,
+      @JsonKey(name: 'strIBA,') this.iba,
+      @JsonKey(name: 'strAlcoholic') this.alcoholic,
+      @JsonKey(name: 'strGlass') this.glass,
+      @JsonKey(name: 'strInstructions') this.instructions,
+      @JsonKey(name: 'strDrinkThumb') this.drinkThumb,
+      @JsonKey(name: 'strIngredient1') this.ingredient1,
+      @JsonKey(name: 'strIngredient2') this.ingredient2,
+      @JsonKey(name: 'strIngredient3') this.ingredient3,
+      @JsonKey(name: 'strIngredient4') this.ingredient4,
+      @JsonKey(name: 'strIngredient5') this.ingredient5,
+      @JsonKey(name: 'strIngredient6') this.ingredient6,
+      @JsonKey(name: 'strIngredient7') this.ingredient7,
+      @JsonKey(name: 'strIngredient8') this.ingredient8,
+      @JsonKey(name: 'strIngredient9') this.ingredient9,
+      @JsonKey(name: 'strIngredient10') this.ingredient10,
+      @JsonKey(name: 'strIngredient11') this.ingredient11,
+      @JsonKey(name: 'strIngredient12') this.ingredient12,
+      @JsonKey(name: 'strIngredient13') this.ingredient13,
+      @JsonKey(name: 'strIngredient14') this.ingredient14,
+      @JsonKey(name: 'strIngredient15') this.ingredient15,
+      @JsonKey(name: 'strMeasure1') this.measure1,
+      @JsonKey(name: 'strMeasure2') this.measure2,
+      @JsonKey(name: 'strMeasure3') this.measure3,
+      @JsonKey(name: 'strMeasure4') this.measure4,
+      @JsonKey(name: 'strMeasure5') this.measure5,
+      @JsonKey(name: 'strMeasure6') this.measure6,
+      @JsonKey(name: 'strMeasure7') this.measure7,
+      @JsonKey(name: 'strMeasure8') this.measure8,
+      @JsonKey(name: 'strMeasure9') this.measure9,
+      @JsonKey(name: 'strMeasure10') this.measure10,
+      @JsonKey(name: 'strMeasure11') this.measure11,
+      @JsonKey(name: 'strMeasure12') this.measure12,
+      @JsonKey(name: 'strMeasure13') this.measure13,
+      @JsonKey(name: 'strMeasure14') this.measure14,
+      @JsonKey(name: 'strMeasure15') this.measure15,
       this.strCreativeCommonsConfirmed,
       this.dateModified});
 
@@ -762,87 +735,128 @@ class _$_Drink implements _Drink {
       _$_$_DrinkFromJson(json);
 
   @override
-  final String idDrink;
+  @JsonKey(name: 'idDrink')
+  final String id;
   @override
-  final String strDrink;
+  @JsonKey(name: 'strDrink')
+  final String name;
   @override
-  final String strDrinkAlternate;
+  @JsonKey(name: 'strDrinkAlternate')
+  final String alternateName;
   @override
-  final String strTags;
+  @JsonKey(name: 'strTags')
+  final String tags;
   @override
-  final String strVideo;
+  @JsonKey(name: 'strVideo')
+  final String video;
   @override
-  final String strCategory;
+  @JsonKey(name: 'strCategory')
+  final String category;
   @override
-  final String strIba;
+  @JsonKey(name: 'strIBA,')
+  final String iba;
   @override
-  final String strAlcoholic;
+  @JsonKey(name: 'strAlcoholic')
+  final String alcoholic;
   @override
-  final String strGlass;
+  @JsonKey(name: 'strGlass')
+  final String glass;
   @override
-  final String strInstructions;
+  @JsonKey(name: 'strInstructions')
+  final String instructions;
   @override
-  final String strDrinkThumb;
+  @JsonKey(name: 'strDrinkThumb')
+  final String drinkThumb;
   @override
-  final String strIngredient1;
+  @JsonKey(name: 'strIngredient1')
+  final String ingredient1;
   @override
-  final String strIngredient2;
+  @JsonKey(name: 'strIngredient2')
+  final String ingredient2;
   @override
-  final String strIngredient3;
+  @JsonKey(name: 'strIngredient3')
+  final String ingredient3;
   @override
-  final String strIngredient4;
+  @JsonKey(name: 'strIngredient4')
+  final String ingredient4;
   @override
-  final String strIngredient5;
+  @JsonKey(name: 'strIngredient5')
+  final String ingredient5;
   @override
-  final String strIngredient6;
+  @JsonKey(name: 'strIngredient6')
+  final String ingredient6;
   @override
-  final String strIngredient7;
+  @JsonKey(name: 'strIngredient7')
+  final String ingredient7;
   @override
-  final String strIngredient8;
+  @JsonKey(name: 'strIngredient8')
+  final String ingredient8;
   @override
-  final String strIngredient9;
+  @JsonKey(name: 'strIngredient9')
+  final String ingredient9;
   @override
-  final String strIngredient10;
+  @JsonKey(name: 'strIngredient10')
+  final String ingredient10;
   @override
-  final String strIngredient11;
+  @JsonKey(name: 'strIngredient11')
+  final String ingredient11;
   @override
-  final String strIngredient12;
+  @JsonKey(name: 'strIngredient12')
+  final String ingredient12;
   @override
-  final String strIngredient13;
+  @JsonKey(name: 'strIngredient13')
+  final String ingredient13;
   @override
-  final String strIngredient14;
+  @JsonKey(name: 'strIngredient14')
+  final String ingredient14;
   @override
-  final String strIngredient15;
+  @JsonKey(name: 'strIngredient15')
+  final String ingredient15;
   @override
-  final String strMeasure1;
+  @JsonKey(name: 'strMeasure1')
+  final String measure1;
   @override
-  final String strMeasure2;
+  @JsonKey(name: 'strMeasure2')
+  final String measure2;
   @override
-  final String strMeasure3;
+  @JsonKey(name: 'strMeasure3')
+  final String measure3;
   @override
-  final String strMeasure4;
+  @JsonKey(name: 'strMeasure4')
+  final String measure4;
   @override
-  final String strMeasure5;
+  @JsonKey(name: 'strMeasure5')
+  final String measure5;
   @override
-  final String strMeasure6;
+  @JsonKey(name: 'strMeasure6')
+  final String measure6;
   @override
-  final String strMeasure7;
+  @JsonKey(name: 'strMeasure7')
+  final String measure7;
   @override
-  final String strMeasure8;
+  @JsonKey(name: 'strMeasure8')
+  final String measure8;
   @override
-  final String strMeasure9;
+  @JsonKey(name: 'strMeasure9')
+  final String measure9;
   @override
-  final String strMeasure10;
+  @JsonKey(name: 'strMeasure10')
+  final String measure10;
   @override
-  final String strMeasure11;
+  @JsonKey(name: 'strMeasure11')
+  final String measure11;
   @override
-  final String strMeasure12;
+  @JsonKey(name: 'strMeasure12')
+  final String measure12;
   @override
-  final String strMeasure13;
+  @JsonKey(name: 'strMeasure13')
+  final String measure13;
   @override
-  final String strMeasure14;
+  @JsonKey(name: 'strMeasure14')
+  final String measure14;
   @override
-  final String strMeasure15;
+  @JsonKey(name: 'strMeasure15')
+  final String measure15;
   @override
   final String strCreativeCommonsConfirmed;
   @override
@@ -850,97 +864,97 @@ class _$_Drink implements _Drink {
 
   @override
   String toString() {
-    return 'Drink(idDrink: $idDrink, strDrink: $strDrink, strDrinkAlternate: $strDrinkAlternate, strTags: $strTags, strVideo: $strVideo, strCategory: $strCategory, strIba: $strIba, strAlcoholic: $strAlcoholic, strGlass: $strGlass, strInstructions: $strInstructions, strDrinkThumb: $strDrinkThumb, strIngredient1: $strIngredient1, strIngredient2: $strIngredient2, strIngredient3: $strIngredient3, strIngredient4: $strIngredient4, strIngredient5: $strIngredient5, strIngredient6: $strIngredient6, strIngredient7: $strIngredient7, strIngredient8: $strIngredient8, strIngredient9: $strIngredient9, strIngredient10: $strIngredient10, strIngredient11: $strIngredient11, strIngredient12: $strIngredient12, strIngredient13: $strIngredient13, strIngredient14: $strIngredient14, strIngredient15: $strIngredient15, strMeasure1: $strMeasure1, strMeasure2: $strMeasure2, strMeasure3: $strMeasure3, strMeasure4: $strMeasure4, strMeasure5: $strMeasure5, strMeasure6: $strMeasure6, strMeasure7: $strMeasure7, strMeasure8: $strMeasure8, strMeasure9: $strMeasure9, strMeasure10: $strMeasure10, strMeasure11: $strMeasure11, strMeasure12: $strMeasure12, strMeasure13: $strMeasure13, strMeasure14: $strMeasure14, strMeasure15: $strMeasure15, strCreativeCommonsConfirmed: $strCreativeCommonsConfirmed, dateModified: $dateModified)';
+    return 'Drink(id: $id, name: $name, alternateName: $alternateName, tags: $tags, video: $video, category: $category, iba: $iba, alcoholic: $alcoholic, glass: $glass, instructions: $instructions, drinkThumb: $drinkThumb, ingredient1: $ingredient1, ingredient2: $ingredient2, ingredient3: $ingredient3, ingredient4: $ingredient4, ingredient5: $ingredient5, ingredient6: $ingredient6, ingredient7: $ingredient7, ingredient8: $ingredient8, ingredient9: $ingredient9, ingredient10: $ingredient10, ingredient11: $ingredient11, ingredient12: $ingredient12, ingredient13: $ingredient13, ingredient14: $ingredient14, ingredient15: $ingredient15, measure1: $measure1, measure2: $measure2, measure3: $measure3, measure4: $measure4, measure5: $measure5, measure6: $measure6, measure7: $measure7, measure8: $measure8, measure9: $measure9, measure10: $measure10, measure11: $measure11, measure12: $measure12, measure13: $measure13, measure14: $measure14, measure15: $measure15, strCreativeCommonsConfirmed: $strCreativeCommonsConfirmed, dateModified: $dateModified)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Drink &&
-            (identical(other.idDrink, idDrink) ||
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.alternateName, alternateName) ||
                 const DeepCollectionEquality()
-                    .equals(other.idDrink, idDrink)) &&
-            (identical(other.strDrink, strDrink) ||
+                    .equals(other.alternateName, alternateName)) &&
+            (identical(other.tags, tags) ||
+                const DeepCollectionEquality().equals(other.tags, tags)) &&
+            (identical(other.video, video) ||
+                const DeepCollectionEquality().equals(other.video, video)) &&
+            (identical(other.category, category) ||
                 const DeepCollectionEquality()
-                    .equals(other.strDrink, strDrink)) &&
-            (identical(other.strDrinkAlternate, strDrinkAlternate) ||
+                    .equals(other.category, category)) &&
+            (identical(other.iba, iba) ||
+                const DeepCollectionEquality().equals(other.iba, iba)) &&
+            (identical(other.alcoholic, alcoholic) ||
                 const DeepCollectionEquality()
-                    .equals(other.strDrinkAlternate, strDrinkAlternate)) &&
-            (identical(other.strTags, strTags) ||
+                    .equals(other.alcoholic, alcoholic)) &&
+            (identical(other.glass, glass) ||
+                const DeepCollectionEquality().equals(other.glass, glass)) &&
+            (identical(other.instructions, instructions) ||
                 const DeepCollectionEquality()
-                    .equals(other.strTags, strTags)) &&
-            (identical(other.strVideo, strVideo) ||
+                    .equals(other.instructions, instructions)) &&
+            (identical(other.drinkThumb, drinkThumb) ||
                 const DeepCollectionEquality()
-                    .equals(other.strVideo, strVideo)) &&
-            (identical(other.strCategory, strCategory) ||
+                    .equals(other.drinkThumb, drinkThumb)) &&
+            (identical(other.ingredient1, ingredient1) ||
                 const DeepCollectionEquality()
-                    .equals(other.strCategory, strCategory)) &&
-            (identical(other.strIba, strIba) ||
-                const DeepCollectionEquality().equals(other.strIba, strIba)) &&
-            (identical(other.strAlcoholic, strAlcoholic) ||
+                    .equals(other.ingredient1, ingredient1)) &&
+            (identical(other.ingredient2, ingredient2) ||
                 const DeepCollectionEquality()
-                    .equals(other.strAlcoholic, strAlcoholic)) &&
-            (identical(other.strGlass, strGlass) ||
+                    .equals(other.ingredient2, ingredient2)) &&
+            (identical(other.ingredient3, ingredient3) ||
                 const DeepCollectionEquality()
-                    .equals(other.strGlass, strGlass)) &&
-            (identical(other.strInstructions, strInstructions) ||
+                    .equals(other.ingredient3, ingredient3)) &&
+            (identical(other.ingredient4, ingredient4) ||
                 const DeepCollectionEquality()
-                    .equals(other.strInstructions, strInstructions)) &&
-            (identical(other.strDrinkThumb, strDrinkThumb) ||
+                    .equals(other.ingredient4, ingredient4)) &&
+            (identical(other.ingredient5, ingredient5) ||
                 const DeepCollectionEquality()
-                    .equals(other.strDrinkThumb, strDrinkThumb)) &&
-            (identical(other.strIngredient1, strIngredient1) ||
+                    .equals(other.ingredient5, ingredient5)) &&
+            (identical(other.ingredient6, ingredient6) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient1, strIngredient1)) &&
-            (identical(other.strIngredient2, strIngredient2) ||
+                    .equals(other.ingredient6, ingredient6)) &&
+            (identical(other.ingredient7, ingredient7) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient2, strIngredient2)) &&
-            (identical(other.strIngredient3, strIngredient3) ||
+                    .equals(other.ingredient7, ingredient7)) &&
+            (identical(other.ingredient8, ingredient8) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient3, strIngredient3)) &&
-            (identical(other.strIngredient4, strIngredient4) ||
+                    .equals(other.ingredient8, ingredient8)) &&
+            (identical(other.ingredient9, ingredient9) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient4, strIngredient4)) &&
-            (identical(other.strIngredient5, strIngredient5) ||
+                    .equals(other.ingredient9, ingredient9)) &&
+            (identical(other.ingredient10, ingredient10) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient5, strIngredient5)) &&
-            (identical(other.strIngredient6, strIngredient6) ||
+                    .equals(other.ingredient10, ingredient10)) &&
+            (identical(other.ingredient11, ingredient11) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient6, strIngredient6)) &&
-            (identical(other.strIngredient7, strIngredient7) ||
+                    .equals(other.ingredient11, ingredient11)) &&
+            (identical(other.ingredient12, ingredient12) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient7, strIngredient7)) &&
-            (identical(other.strIngredient8, strIngredient8) ||
+                    .equals(other.ingredient12, ingredient12)) &&
+            (identical(other.ingredient13, ingredient13) ||
                 const DeepCollectionEquality()
-                    .equals(other.strIngredient8, strIngredient8)) &&
-            (identical(other.strIngredient9, strIngredient9) ||
-                const DeepCollectionEquality()
-                    .equals(other.strIngredient9, strIngredient9)) &&
-            (identical(other.strIngredient10, strIngredient10) ||
-                const DeepCollectionEquality()
-                    .equals(other.strIngredient10, strIngredient10)) &&
-            (identical(other.strIngredient11, strIngredient11) ||
-                const DeepCollectionEquality()
-                    .equals(other.strIngredient11, strIngredient11)) &&
-            (identical(other.strIngredient12, strIngredient12) || const DeepCollectionEquality().equals(other.strIngredient12, strIngredient12)) &&
-            (identical(other.strIngredient13, strIngredient13) || const DeepCollectionEquality().equals(other.strIngredient13, strIngredient13)) &&
-            (identical(other.strIngredient14, strIngredient14) || const DeepCollectionEquality().equals(other.strIngredient14, strIngredient14)) &&
-            (identical(other.strIngredient15, strIngredient15) || const DeepCollectionEquality().equals(other.strIngredient15, strIngredient15)) &&
-            (identical(other.strMeasure1, strMeasure1) || const DeepCollectionEquality().equals(other.strMeasure1, strMeasure1)) &&
-            (identical(other.strMeasure2, strMeasure2) || const DeepCollectionEquality().equals(other.strMeasure2, strMeasure2)) &&
-            (identical(other.strMeasure3, strMeasure3) || const DeepCollectionEquality().equals(other.strMeasure3, strMeasure3)) &&
-            (identical(other.strMeasure4, strMeasure4) || const DeepCollectionEquality().equals(other.strMeasure4, strMeasure4)) &&
-            (identical(other.strMeasure5, strMeasure5) || const DeepCollectionEquality().equals(other.strMeasure5, strMeasure5)) &&
-            (identical(other.strMeasure6, strMeasure6) || const DeepCollectionEquality().equals(other.strMeasure6, strMeasure6)) &&
-            (identical(other.strMeasure7, strMeasure7) || const DeepCollectionEquality().equals(other.strMeasure7, strMeasure7)) &&
-            (identical(other.strMeasure8, strMeasure8) || const DeepCollectionEquality().equals(other.strMeasure8, strMeasure8)) &&
-            (identical(other.strMeasure9, strMeasure9) || const DeepCollectionEquality().equals(other.strMeasure9, strMeasure9)) &&
-            (identical(other.strMeasure10, strMeasure10) || const DeepCollectionEquality().equals(other.strMeasure10, strMeasure10)) &&
-            (identical(other.strMeasure11, strMeasure11) || const DeepCollectionEquality().equals(other.strMeasure11, strMeasure11)) &&
-            (identical(other.strMeasure12, strMeasure12) || const DeepCollectionEquality().equals(other.strMeasure12, strMeasure12)) &&
-            (identical(other.strMeasure13, strMeasure13) || const DeepCollectionEquality().equals(other.strMeasure13, strMeasure13)) &&
-            (identical(other.strMeasure14, strMeasure14) || const DeepCollectionEquality().equals(other.strMeasure14, strMeasure14)) &&
-            (identical(other.strMeasure15, strMeasure15) || const DeepCollectionEquality().equals(other.strMeasure15, strMeasure15)) &&
+                    .equals(other.ingredient13, ingredient13)) &&
+            (identical(other.ingredient14, ingredient14) ||
+                const DeepCollectionEquality().equals(other.ingredient14, ingredient14)) &&
+            (identical(other.ingredient15, ingredient15) || const DeepCollectionEquality().equals(other.ingredient15, ingredient15)) &&
+            (identical(other.measure1, measure1) || const DeepCollectionEquality().equals(other.measure1, measure1)) &&
+            (identical(other.measure2, measure2) || const DeepCollectionEquality().equals(other.measure2, measure2)) &&
+            (identical(other.measure3, measure3) || const DeepCollectionEquality().equals(other.measure3, measure3)) &&
+            (identical(other.measure4, measure4) || const DeepCollectionEquality().equals(other.measure4, measure4)) &&
+            (identical(other.measure5, measure5) || const DeepCollectionEquality().equals(other.measure5, measure5)) &&
+            (identical(other.measure6, measure6) || const DeepCollectionEquality().equals(other.measure6, measure6)) &&
+            (identical(other.measure7, measure7) || const DeepCollectionEquality().equals(other.measure7, measure7)) &&
+            (identical(other.measure8, measure8) || const DeepCollectionEquality().equals(other.measure8, measure8)) &&
+            (identical(other.measure9, measure9) || const DeepCollectionEquality().equals(other.measure9, measure9)) &&
+            (identical(other.measure10, measure10) || const DeepCollectionEquality().equals(other.measure10, measure10)) &&
+            (identical(other.measure11, measure11) || const DeepCollectionEquality().equals(other.measure11, measure11)) &&
+            (identical(other.measure12, measure12) || const DeepCollectionEquality().equals(other.measure12, measure12)) &&
+            (identical(other.measure13, measure13) || const DeepCollectionEquality().equals(other.measure13, measure13)) &&
+            (identical(other.measure14, measure14) || const DeepCollectionEquality().equals(other.measure14, measure14)) &&
+            (identical(other.measure15, measure15) || const DeepCollectionEquality().equals(other.measure15, measure15)) &&
             (identical(other.strCreativeCommonsConfirmed, strCreativeCommonsConfirmed) || const DeepCollectionEquality().equals(other.strCreativeCommonsConfirmed, strCreativeCommonsConfirmed)) &&
             (identical(other.dateModified, dateModified) || const DeepCollectionEquality().equals(other.dateModified, dateModified)));
   }
@@ -948,47 +962,47 @@ class _$_Drink implements _Drink {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(idDrink) ^
-      const DeepCollectionEquality().hash(strDrink) ^
-      const DeepCollectionEquality().hash(strDrinkAlternate) ^
-      const DeepCollectionEquality().hash(strTags) ^
-      const DeepCollectionEquality().hash(strVideo) ^
-      const DeepCollectionEquality().hash(strCategory) ^
-      const DeepCollectionEquality().hash(strIba) ^
-      const DeepCollectionEquality().hash(strAlcoholic) ^
-      const DeepCollectionEquality().hash(strGlass) ^
-      const DeepCollectionEquality().hash(strInstructions) ^
-      const DeepCollectionEquality().hash(strDrinkThumb) ^
-      const DeepCollectionEquality().hash(strIngredient1) ^
-      const DeepCollectionEquality().hash(strIngredient2) ^
-      const DeepCollectionEquality().hash(strIngredient3) ^
-      const DeepCollectionEquality().hash(strIngredient4) ^
-      const DeepCollectionEquality().hash(strIngredient5) ^
-      const DeepCollectionEquality().hash(strIngredient6) ^
-      const DeepCollectionEquality().hash(strIngredient7) ^
-      const DeepCollectionEquality().hash(strIngredient8) ^
-      const DeepCollectionEquality().hash(strIngredient9) ^
-      const DeepCollectionEquality().hash(strIngredient10) ^
-      const DeepCollectionEquality().hash(strIngredient11) ^
-      const DeepCollectionEquality().hash(strIngredient12) ^
-      const DeepCollectionEquality().hash(strIngredient13) ^
-      const DeepCollectionEquality().hash(strIngredient14) ^
-      const DeepCollectionEquality().hash(strIngredient15) ^
-      const DeepCollectionEquality().hash(strMeasure1) ^
-      const DeepCollectionEquality().hash(strMeasure2) ^
-      const DeepCollectionEquality().hash(strMeasure3) ^
-      const DeepCollectionEquality().hash(strMeasure4) ^
-      const DeepCollectionEquality().hash(strMeasure5) ^
-      const DeepCollectionEquality().hash(strMeasure6) ^
-      const DeepCollectionEquality().hash(strMeasure7) ^
-      const DeepCollectionEquality().hash(strMeasure8) ^
-      const DeepCollectionEquality().hash(strMeasure9) ^
-      const DeepCollectionEquality().hash(strMeasure10) ^
-      const DeepCollectionEquality().hash(strMeasure11) ^
-      const DeepCollectionEquality().hash(strMeasure12) ^
-      const DeepCollectionEquality().hash(strMeasure13) ^
-      const DeepCollectionEquality().hash(strMeasure14) ^
-      const DeepCollectionEquality().hash(strMeasure15) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(alternateName) ^
+      const DeepCollectionEquality().hash(tags) ^
+      const DeepCollectionEquality().hash(video) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(iba) ^
+      const DeepCollectionEquality().hash(alcoholic) ^
+      const DeepCollectionEquality().hash(glass) ^
+      const DeepCollectionEquality().hash(instructions) ^
+      const DeepCollectionEquality().hash(drinkThumb) ^
+      const DeepCollectionEquality().hash(ingredient1) ^
+      const DeepCollectionEquality().hash(ingredient2) ^
+      const DeepCollectionEquality().hash(ingredient3) ^
+      const DeepCollectionEquality().hash(ingredient4) ^
+      const DeepCollectionEquality().hash(ingredient5) ^
+      const DeepCollectionEquality().hash(ingredient6) ^
+      const DeepCollectionEquality().hash(ingredient7) ^
+      const DeepCollectionEquality().hash(ingredient8) ^
+      const DeepCollectionEquality().hash(ingredient9) ^
+      const DeepCollectionEquality().hash(ingredient10) ^
+      const DeepCollectionEquality().hash(ingredient11) ^
+      const DeepCollectionEquality().hash(ingredient12) ^
+      const DeepCollectionEquality().hash(ingredient13) ^
+      const DeepCollectionEquality().hash(ingredient14) ^
+      const DeepCollectionEquality().hash(ingredient15) ^
+      const DeepCollectionEquality().hash(measure1) ^
+      const DeepCollectionEquality().hash(measure2) ^
+      const DeepCollectionEquality().hash(measure3) ^
+      const DeepCollectionEquality().hash(measure4) ^
+      const DeepCollectionEquality().hash(measure5) ^
+      const DeepCollectionEquality().hash(measure6) ^
+      const DeepCollectionEquality().hash(measure7) ^
+      const DeepCollectionEquality().hash(measure8) ^
+      const DeepCollectionEquality().hash(measure9) ^
+      const DeepCollectionEquality().hash(measure10) ^
+      const DeepCollectionEquality().hash(measure11) ^
+      const DeepCollectionEquality().hash(measure12) ^
+      const DeepCollectionEquality().hash(measure13) ^
+      const DeepCollectionEquality().hash(measure14) ^
+      const DeepCollectionEquality().hash(measure15) ^
       const DeepCollectionEquality().hash(strCreativeCommonsConfirmed) ^
       const DeepCollectionEquality().hash(dateModified);
 
@@ -1004,134 +1018,175 @@ class _$_Drink implements _Drink {
 
 abstract class _Drink implements Drink {
   const factory _Drink(
-      {String idDrink,
-      String strDrink,
-      String strDrinkAlternate,
-      String strTags,
-      String strVideo,
-      String strCategory,
-      String strIba,
-      String strAlcoholic,
-      String strGlass,
-      String strInstructions,
-      String strDrinkThumb,
-      String strIngredient1,
-      String strIngredient2,
-      String strIngredient3,
-      String strIngredient4,
-      String strIngredient5,
-      String strIngredient6,
-      String strIngredient7,
-      String strIngredient8,
-      String strIngredient9,
-      String strIngredient10,
-      String strIngredient11,
-      String strIngredient12,
-      String strIngredient13,
-      String strIngredient14,
-      String strIngredient15,
-      String strMeasure1,
-      String strMeasure2,
-      String strMeasure3,
-      String strMeasure4,
-      String strMeasure5,
-      String strMeasure6,
-      String strMeasure7,
-      String strMeasure8,
-      String strMeasure9,
-      String strMeasure10,
-      String strMeasure11,
-      String strMeasure12,
-      String strMeasure13,
-      String strMeasure14,
-      String strMeasure15,
+      {@JsonKey(name: 'idDrink') String id,
+      @JsonKey(name: 'strDrink') String name,
+      @JsonKey(name: 'strDrinkAlternate') String alternateName,
+      @JsonKey(name: 'strTags') String tags,
+      @JsonKey(name: 'strVideo') String video,
+      @JsonKey(name: 'strCategory') String category,
+      @JsonKey(name: 'strIBA,') String iba,
+      @JsonKey(name: 'strAlcoholic') String alcoholic,
+      @JsonKey(name: 'strGlass') String glass,
+      @JsonKey(name: 'strInstructions') String instructions,
+      @JsonKey(name: 'strDrinkThumb') String drinkThumb,
+      @JsonKey(name: 'strIngredient1') String ingredient1,
+      @JsonKey(name: 'strIngredient2') String ingredient2,
+      @JsonKey(name: 'strIngredient3') String ingredient3,
+      @JsonKey(name: 'strIngredient4') String ingredient4,
+      @JsonKey(name: 'strIngredient5') String ingredient5,
+      @JsonKey(name: 'strIngredient6') String ingredient6,
+      @JsonKey(name: 'strIngredient7') String ingredient7,
+      @JsonKey(name: 'strIngredient8') String ingredient8,
+      @JsonKey(name: 'strIngredient9') String ingredient9,
+      @JsonKey(name: 'strIngredient10') String ingredient10,
+      @JsonKey(name: 'strIngredient11') String ingredient11,
+      @JsonKey(name: 'strIngredient12') String ingredient12,
+      @JsonKey(name: 'strIngredient13') String ingredient13,
+      @JsonKey(name: 'strIngredient14') String ingredient14,
+      @JsonKey(name: 'strIngredient15') String ingredient15,
+      @JsonKey(name: 'strMeasure1') String measure1,
+      @JsonKey(name: 'strMeasure2') String measure2,
+      @JsonKey(name: 'strMeasure3') String measure3,
+      @JsonKey(name: 'strMeasure4') String measure4,
+      @JsonKey(name: 'strMeasure5') String measure5,
+      @JsonKey(name: 'strMeasure6') String measure6,
+      @JsonKey(name: 'strMeasure7') String measure7,
+      @JsonKey(name: 'strMeasure8') String measure8,
+      @JsonKey(name: 'strMeasure9') String measure9,
+      @JsonKey(name: 'strMeasure10') String measure10,
+      @JsonKey(name: 'strMeasure11') String measure11,
+      @JsonKey(name: 'strMeasure12') String measure12,
+      @JsonKey(name: 'strMeasure13') String measure13,
+      @JsonKey(name: 'strMeasure14') String measure14,
+      @JsonKey(name: 'strMeasure15') String measure15,
       String strCreativeCommonsConfirmed,
       DateTime dateModified}) = _$_Drink;
 
   factory _Drink.fromJson(Map<String, dynamic> json) = _$_Drink.fromJson;
 
   @override
-  String get idDrink;
+  @JsonKey(name: 'idDrink')
+  String get id;
   @override
-  String get strDrink;
+  @JsonKey(name: 'strDrink')
+  String get name;
   @override
-  String get strDrinkAlternate;
+  @JsonKey(name: 'strDrinkAlternate')
+  String get alternateName;
   @override
-  String get strTags;
+  @JsonKey(name: 'strTags')
+  String get tags;
   @override
-  String get strVideo;
+  @JsonKey(name: 'strVideo')
+  String get video;
   @override
-  String get strCategory;
+  @JsonKey(name: 'strCategory')
+  String get category;
   @override
-  String get strIba;
+  @JsonKey(name: 'strIBA,')
+  String get iba;
   @override
-  String get strAlcoholic;
+  @JsonKey(name: 'strAlcoholic')
+  String get alcoholic;
   @override
-  String get strGlass;
+  @JsonKey(name: 'strGlass')
+  String get glass;
   @override
-  String get strInstructions;
+  @JsonKey(name: 'strInstructions')
+  String get instructions;
   @override
-  String get strDrinkThumb;
+  @JsonKey(name: 'strDrinkThumb')
+  String get drinkThumb;
   @override
-  String get strIngredient1;
+  @JsonKey(name: 'strIngredient1')
+  String get ingredient1;
   @override
-  String get strIngredient2;
+  @JsonKey(name: 'strIngredient2')
+  String get ingredient2;
   @override
-  String get strIngredient3;
+  @JsonKey(name: 'strIngredient3')
+  String get ingredient3;
   @override
-  String get strIngredient4;
+  @JsonKey(name: 'strIngredient4')
+  String get ingredient4;
   @override
-  String get strIngredient5;
+  @JsonKey(name: 'strIngredient5')
+  String get ingredient5;
   @override
-  String get strIngredient6;
+  @JsonKey(name: 'strIngredient6')
+  String get ingredient6;
   @override
-  String get strIngredient7;
+  @JsonKey(name: 'strIngredient7')
+  String get ingredient7;
   @override
-  String get strIngredient8;
+  @JsonKey(name: 'strIngredient8')
+  String get ingredient8;
   @override
-  String get strIngredient9;
+  @JsonKey(name: 'strIngredient9')
+  String get ingredient9;
   @override
-  String get strIngredient10;
+  @JsonKey(name: 'strIngredient10')
+  String get ingredient10;
   @override
-  String get strIngredient11;
+  @JsonKey(name: 'strIngredient11')
+  String get ingredient11;
   @override
-  String get strIngredient12;
+  @JsonKey(name: 'strIngredient12')
+  String get ingredient12;
   @override
-  String get strIngredient13;
+  @JsonKey(name: 'strIngredient13')
+  String get ingredient13;
   @override
-  String get strIngredient14;
+  @JsonKey(name: 'strIngredient14')
+  String get ingredient14;
   @override
-  String get strIngredient15;
+  @JsonKey(name: 'strIngredient15')
+  String get ingredient15;
   @override
-  String get strMeasure1;
+  @JsonKey(name: 'strMeasure1')
+  String get measure1;
   @override
-  String get strMeasure2;
+  @JsonKey(name: 'strMeasure2')
+  String get measure2;
   @override
-  String get strMeasure3;
+  @JsonKey(name: 'strMeasure3')
+  String get measure3;
   @override
-  String get strMeasure4;
+  @JsonKey(name: 'strMeasure4')
+  String get measure4;
   @override
-  String get strMeasure5;
+  @JsonKey(name: 'strMeasure5')
+  String get measure5;
   @override
-  String get strMeasure6;
+  @JsonKey(name: 'strMeasure6')
+  String get measure6;
   @override
-  String get strMeasure7;
+  @JsonKey(name: 'strMeasure7')
+  String get measure7;
   @override
-  String get strMeasure8;
+  @JsonKey(name: 'strMeasure8')
+  String get measure8;
   @override
-  String get strMeasure9;
+  @JsonKey(name: 'strMeasure9')
+  String get measure9;
   @override
-  String get strMeasure10;
+  @JsonKey(name: 'strMeasure10')
+  String get measure10;
   @override
-  String get strMeasure11;
+  @JsonKey(name: 'strMeasure11')
+  String get measure11;
   @override
-  String get strMeasure12;
+  @JsonKey(name: 'strMeasure12')
+  String get measure12;
   @override
-  String get strMeasure13;
+  @JsonKey(name: 'strMeasure13')
+  String get measure13;
   @override
-  String get strMeasure14;
+  @JsonKey(name: 'strMeasure14')
+  String get measure14;
   @override
-  String get strMeasure15;
+  @JsonKey(name: 'strMeasure15')
+  String get measure15;
   @override
   String get strCreativeCommonsConfirmed;
   @override
