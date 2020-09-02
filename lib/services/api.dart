@@ -11,12 +11,12 @@ class Api {
   final _dio = locator<Dio>();
 
   ///Search
-  final String searchQueryParam = 'search.php';
+  final String _searchQueryParam = 'search.php';
 
   ///Search by name
   Future<Drinks> searchCocktailByName(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'s': name});
+        .get('$_apiEndpoint$_searchQueryParam', queryParameters: {'s': name});
 
     return Drinks.fromJson(response.data);
   }
@@ -24,18 +24,18 @@ class Api {
   ///Search ingredient by name
   Future<Drinks> searchIngredientByName(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'i': name});
+        .get('$_apiEndpoint$_searchQueryParam', queryParameters: {'i': name});
 
     return Drinks.fromJson(response.data);
   }
 
   ///Lookup
-  final String lookupQueryParam = 'lookup.php';
+  final String _lookupQueryParam = 'lookup.php';
 
   ///Lookup full cocktail details by id
   Future<Drink> lookupCocktailById(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'i': name});
+        .get('$_apiEndpoint$_lookupQueryParam', queryParameters: {'i': name});
 
     return Drinks.fromJson(response.data).drinks.first;
   }
@@ -43,27 +43,29 @@ class Api {
   ///Lookup ingredient by ID
   Future<Ingredient> lookupIngredientById(String id) async {
     var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'iid': id});
+        .get('$_apiEndpoint$_lookupQueryParam', queryParameters: {'iid': id});
 
     return Ingredients.fromJson(response.data).ingredients.first;
   }
 
   ///Lookup a random cocktail
-  final String randomParam = 'random.php';
+  final String _randomParam = 'random.php';
 
-  Future<Ingredient> lookupRandomCocktail() async {
+  Future<Drink> lookupRandomCocktail() async {
     try {
-      final response = await _dio.get('$_apiEndpoint$randomParam');
-      return Ingredients.fromJson(response.data).ingredients.first;
+      final response = await _dio.get('$_apiEndpoint$_randomParam');
+      return Drinks.fromJson(response.data).drinks.first;
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
       if (e.response != null) {
+        throw Future.error("error");
         print(e.response.data);
         print(e.response.headers);
         print(e.response.request);
       } else {
         // Something happened in setting up or sending the request that triggered an Error
+        throw Future.error('error');
         print(e.request);
         print(e.message);
       }
@@ -71,7 +73,7 @@ class Api {
   }
 
   ///Filter
-  final String filterQueryParam = 'filter.php';
+  final String _filterQueryParam = 'filter.php';
 
   ///Filter by ingredient
   Future<List<DrinkInfo>> searchByIngredient(String param) async {
@@ -95,7 +97,7 @@ class Api {
 
   Future<List<DrinkInfo>> _filter(String param, String category) async {
     try {
-      final response = await _dio.get('$_apiEndpoint$filterQueryParam',
+      final response = await _dio.get('$_apiEndpoint$_filterQueryParam',
           queryParameters: {category: param});
       return FilterResponse.fromJson(response.data).drinks;
     } on DioError catch (e) {

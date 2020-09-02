@@ -15,8 +15,8 @@ abstract class FilterResponse with _$FilterResponse {
 abstract class DrinkInfo with _$DrinkInfo {
   const factory DrinkInfo(
       @JsonKey(name: 'idDrink') String id,
-      @JsonKey(name: 'strThumbnail') String thumbnail,
-      @JsonKey(name: 'strName') String name) = _DrinkInfo;
+      @JsonKey(name: 'strDrinkThumb') String thumbnail,
+      @JsonKey(name: 'strDrink') String name) = _DrinkInfo;
 
   factory DrinkInfo.fromJson(Map<String, dynamic> json) =>
       _$DrinkInfoFromJson(json);

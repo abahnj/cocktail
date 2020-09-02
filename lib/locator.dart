@@ -6,8 +6,5 @@ GetIt locator = GetIt.I;
 
 void setupLocator() {
   locator.registerFactory<Api>(() => Api());
-  locator.registerLazySingleton<Dio>(() {
-    var dio = Dio();
-    return Dio();
-  });
+  locator.registerLazySingleton<Dio>(() => Dio());
 }

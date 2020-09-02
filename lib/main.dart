@@ -1,11 +1,18 @@
 import 'package:cocktail/locator.dart';
+import 'package:cocktail/models/filter.dart';
 import 'package:cocktail/services/api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-void main() {
+Future<void> main() async {
   setupLocator();
-  runApp(MyApp());
+
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -23,40 +30,54 @@ class MyApp extends StatelessWidget {
   }
 }
 
+final apiProvider = FutureProvider.autoDispose<List<DrinkInfo>>((ref) async {
+  return await locator<Api>().filterByAlcoholic('Alcoholic');
+});
+
 class MyHomePage extends HookWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
-  final Api api = locator<Api>();
-
   @override
   Widget build(BuildContext context) {
-    var _counter = useState(0);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '${_counter.value}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+    return useProvider(apiProvider).when(
+      data: (drink) => Scaffold(
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'You have pushed the button this many times:',
+              ),
+              Text(
+                '${drink.toString()}',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: null,
+          tooltip: 'Increment',
+          child: Icon(Icons.add),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      loading: () => Container(
+        color: Colors.white,
+        child: const Center(child: CircularProgressIndicator()),
       ),
+      error: (err, stack) {
+        return Scaffold(
+          appBar: AppBar(title: const Text('Error')),
+          body: Center(
+            child: Text('$err'),
+          ),
+        );
+      },
     );
   }
 }

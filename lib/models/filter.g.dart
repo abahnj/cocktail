@@ -23,14 +23,14 @@ Map<String, dynamic> _$_$_FilterResponseToJson(_$_FilterResponse instance) =>
 _$_DrinkInfo _$_$_DrinkInfoFromJson(Map<String, dynamic> json) {
   return _$_DrinkInfo(
     json['idDrink'] as String,
-    json['strThumbnail'] as String,
-    json['strName'] as String,
+    json['strDrinkThumb'] as String,
+    json['strDrink'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_DrinkInfoToJson(_$_DrinkInfo instance) =>
     <String, dynamic>{
       'idDrink': instance.id,
-      'strThumbnail': instance.thumbnail,
-      'strName': instance.name,
+      'strDrinkThumb': instance.thumbnail,
+      'strDrink': instance.name,
     };
