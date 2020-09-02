@@ -1,5 +1,7 @@
 import 'package:cocktail/locator.dart';
 import 'package:cocktail/models/drinks.dart';
+import 'package:cocktail/models/filter.dart';
+import 'package:cocktail/models/ingredients.dart';
 import 'package:dio/dio.dart';
 
 class Api {
@@ -8,27 +10,13 @@ class Api {
 
   final _dio = locator<Dio>();
 
-  Future<Drinks> getDrink() async {
-    var response = await _dio.get(
-      '$_apiEndpoint',
-      queryParameters: {'i': 11007},
-      options: Options(responseType: ResponseType.json),
-    );
-
-    //log(json.decode(response.data.toString())["drink"].toString());
-
-    if (response.statusCode == 200) {
-      return Drinks.fromJson(response.data);
-    }
-  }
-
   ///Search
-  final String searchQueryParam = 'search.php';
+  final String _searchQueryParam = 'search.php';
 
   ///Search by name
   Future<Drinks> searchCocktailByName(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'s': name});
+        .get('$_apiEndpoint$_searchQueryParam', queryParameters: {'s': name});
 
     return Drinks.fromJson(response.data);
   }
@@ -36,37 +24,94 @@ class Api {
   ///Search ingredient by name
   Future<Drinks> searchIngredientByName(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'i': name});
+        .get('$_apiEndpoint$_searchQueryParam', queryParameters: {'i': name});
 
     return Drinks.fromJson(response.data);
   }
 
-  ///Search ingredient by name
-
   ///Lookup
-  final String lookupQueryParam = 'lookup.php';
+  final String _lookupQueryParam = 'lookup.php';
 
   ///Lookup full cocktail details by id
   Future<Drink> lookupCocktailById(String name) async {
     var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'i': name});
+        .get('$_apiEndpoint$_lookupQueryParam', queryParameters: {'i': name});
 
     return Drinks.fromJson(response.data).drinks.first;
   }
 
   ///Lookup ingredient by ID
-  Future<Drink> lookupIngredientById(String name) async {
+  Future<Ingredient> lookupIngredientById(String id) async {
     var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'iid': name});
+        .get('$_apiEndpoint$_lookupQueryParam', queryParameters: {'iid': id});
 
-    return Drinks.fromJson(response.data).drinks.first;
+    return Ingredients.fromJson(response.data).ingredients.first;
   }
 
   ///Lookup a random cocktail
+  final String _randomParam = 'random.php';
+
+  Future<Drink> lookupRandomCocktail() async {
+    try {
+      final response = await _dio.get('$_apiEndpoint$_randomParam');
+      return Drinks.fromJson(response.data).drinks.first;
+    } on DioError catch (e) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx and is also not 304.
+      if (e.response != null) {
+        throw Future.error("error");
+        print(e.response.data);
+        print(e.response.headers);
+        print(e.response.request);
+      } else {
+        // Something happened in setting up or sending the request that triggered an Error
+        throw Future.error('error');
+        print(e.request);
+        print(e.message);
+      }
+    }
+  }
 
   ///Filter
+  final String _filterQueryParam = 'filter.php';
+
   ///Filter by ingredient
+  Future<List<DrinkInfo>> searchByIngredient(String param) async {
+    return _filter(param, 'i');
+  }
+
   ///Filter by alcoholic
+  Future<List<DrinkInfo>> filterByAlcoholic(String param) async {
+    return _filter(param, 'a');
+  }
+
   ///Filter by Category
+  Future<List<DrinkInfo>> filterByCategory(String param) async {
+    return _filter(param, 'c');
+  }
+
   ///Filter by Glass
+  Future<List<DrinkInfo>> filterByGlass(String param) async {
+    return _filter(param, 'g');
+  }
+
+  Future<List<DrinkInfo>> _filter(String param, String category) async {
+    try {
+      final response = await _dio.get('$_apiEndpoint$_filterQueryParam',
+          queryParameters: {category: param});
+      return FilterResponse.fromJson(response.data).drinks;
+    } on DioError catch (e) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx and is also not 304.
+      if (e.response != null) {
+        print(e.response.data);
+        print(e.response.headers);
+        print(e.response.request);
+      } else {
+        // Something happened in setting up or sending the request that triggered an Error
+        print(e.request);
+        print(e.message);
+      }
+    }
+  }
 }

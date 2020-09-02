@@ -146,8 +146,8 @@ class _$DrinkInfoTearOff {
 // ignore: unused_element
   _DrinkInfo call(
       @JsonKey(name: 'idDrink') String id,
-      @JsonKey(name: 'strThumbnail') String thumbnail,
-      @JsonKey(name: 'strName') String name) {
+      @JsonKey(name: 'strDrinkThumb') String thumbnail,
+      @JsonKey(name: 'strDrink') String name) {
     return _DrinkInfo(
       id,
       thumbnail,
@@ -162,9 +162,9 @@ const $DrinkInfo = _$DrinkInfoTearOff();
 mixin _$DrinkInfo {
   @JsonKey(name: 'idDrink')
   String get id;
-  @JsonKey(name: 'strThumbnail')
+  @JsonKey(name: 'strDrinkThumb')
   String get thumbnail;
-  @JsonKey(name: 'strName')
+  @JsonKey(name: 'strDrink')
   String get name;
 
   Map<String, dynamic> toJson();
@@ -176,8 +176,8 @@ abstract class $DrinkInfoCopyWith<$Res> {
       _$DrinkInfoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'idDrink') String id,
-      @JsonKey(name: 'strThumbnail') String thumbnail,
-      @JsonKey(name: 'strName') String name});
+      @JsonKey(name: 'strDrinkThumb') String thumbnail,
+      @JsonKey(name: 'strDrink') String name});
 }
 
 class _$DrinkInfoCopyWithImpl<$Res> implements $DrinkInfoCopyWith<$Res> {
@@ -208,8 +208,8 @@ abstract class _$DrinkInfoCopyWith<$Res> implements $DrinkInfoCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(name: 'idDrink') String id,
-      @JsonKey(name: 'strThumbnail') String thumbnail,
-      @JsonKey(name: 'strName') String name});
+      @JsonKey(name: 'strDrinkThumb') String thumbnail,
+      @JsonKey(name: 'strDrink') String name});
 }
 
 class __$DrinkInfoCopyWithImpl<$Res> extends _$DrinkInfoCopyWithImpl<$Res>
@@ -238,8 +238,8 @@ class __$DrinkInfoCopyWithImpl<$Res> extends _$DrinkInfoCopyWithImpl<$Res>
 class _$_DrinkInfo implements _DrinkInfo {
   const _$_DrinkInfo(
       @JsonKey(name: 'idDrink') this.id,
-      @JsonKey(name: 'strThumbnail') this.thumbnail,
-      @JsonKey(name: 'strName') this.name)
+      @JsonKey(name: 'strDrinkThumb') this.thumbnail,
+      @JsonKey(name: 'strDrink') this.name)
       : assert(id != null),
         assert(thumbnail != null),
         assert(name != null);
@@ -251,10 +251,10 @@ class _$_DrinkInfo implements _DrinkInfo {
   @JsonKey(name: 'idDrink')
   final String id;
   @override
-  @JsonKey(name: 'strThumbnail')
+  @JsonKey(name: 'strDrinkThumb')
   final String thumbnail;
   @override
-  @JsonKey(name: 'strName')
+  @JsonKey(name: 'strDrink')
   final String name;
 
   @override
@@ -295,8 +295,8 @@ class _$_DrinkInfo implements _DrinkInfo {
 abstract class _DrinkInfo implements DrinkInfo {
   const factory _DrinkInfo(
       @JsonKey(name: 'idDrink') String id,
-      @JsonKey(name: 'strThumbnail') String thumbnail,
-      @JsonKey(name: 'strName') String name) = _$_DrinkInfo;
+      @JsonKey(name: 'strDrinkThumb') String thumbnail,
+      @JsonKey(name: 'strDrink') String name) = _$_DrinkInfo;
 
   factory _DrinkInfo.fromJson(Map<String, dynamic> json) =
       _$_DrinkInfo.fromJson;
@@ -305,10 +305,10 @@ abstract class _DrinkInfo implements DrinkInfo {
   @JsonKey(name: 'idDrink')
   String get id;
   @override
-  @JsonKey(name: 'strThumbnail')
+  @JsonKey(name: 'strDrinkThumb')
   String get thumbnail;
   @override
-  @JsonKey(name: 'strName')
+  @JsonKey(name: 'strDrink')
   String get name;
   @override
   _$DrinkInfoCopyWith<_DrinkInfo> get copyWith;
