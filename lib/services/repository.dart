@@ -1,8 +1,8 @@
-import 'package:cocktail/locator.dart';
-import 'package:cocktail/models/drinks.dart';
-import 'package:cocktail/models/filter.dart';
-import 'package:cocktail/models/ingredients.dart';
-import 'package:cocktail/services/api.dart';
+import '../locator.dart';
+import '../models/drinks.dart';
+import '../models/filter.dart';
+import '../models/ingredients.dart';
+import 'api.dart';
 
 abstract class Repository {
   Drink searchCocktailByName(String name);
@@ -11,6 +11,7 @@ abstract class Repository {
 
   Drink lookupCocktailById(String id);
 
+  /// Find ingredient by id @param id - id of ingredient
   Ingredient lookupIngredientById(String id);
 
   Drink lookupRandomCocktail();

@@ -3,17 +3,22 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'drinks.freezed.dart';
 part 'drinks.g.dart';
 
+/// Drinks Data class
 @freezed
 abstract class Drinks with _$Drinks {
+  /// Default constructor
   const factory Drinks({
     List<Drink> drinks,
   }) = _Drinks;
 
+  /// From json constructor
   factory Drinks.fromJson(Map<String, dynamic> json) => _$DrinksFromJson(json);
 }
 
+/// Drink Data class
 @freezed
 abstract class Drink with _$Drink {
+  ///Default constructor
   const factory Drink({
     @JsonKey(name: 'idDrink') String id,
     @JsonKey(name: 'strDrink') String name,
@@ -60,5 +65,6 @@ abstract class Drink with _$Drink {
     DateTime dateModified,
   }) = _Drink;
 
+  /// From json constructor
   factory Drink.fromJson(Map<String, dynamic> json) => _$DrinkFromJson(json);
 }
