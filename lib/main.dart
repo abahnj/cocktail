@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'constants.dart';
 import 'locator.dart';
 import 'models/filter.dart';
 import 'screens/home_page.dart';
@@ -26,10 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Cocktails',
-        theme: ThemeData(
-          primarySwatch: Colors.pink,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        theme: lightTheme,
         routes: <String, Widget Function(BuildContext)>{
           '/': (context) => const HomePage(),
         },
@@ -47,7 +45,6 @@ class MyHomePage extends HookWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
-
 
   @override
   Widget build(BuildContext context) {
