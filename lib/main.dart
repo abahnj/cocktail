@@ -1,83 +1,94 @@
-import 'package:cocktail/locator.dart';
-import 'package:cocktail/models/filter.dart';
-import 'package:cocktail/services/api.dart';
+import 'package:cocktail/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'constants.dart';
+import 'locator.dart';
+import 'models/filter.dart';
+import 'screens/home_page.dart';
+import 'services/api.dart';
 
 Future<void> main() async {
   setupLocator();
 
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MyApp(),
     ),
   );
 }
 
+///
 class MyApp extends StatelessWidget {
+  ///
+  const MyApp({Key key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Cocktails',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Cocktail'),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'Cocktails',
+        theme: lightTheme,
+        home: MyHomePage(),
+      );
 }
 
-final apiProvider = FutureProvider.autoDispose<List<DrinkInfo>>((ref) async {
-  return await locator<Api>().filterByAlcoholic('Alcoholic');
-});
+/// Api provider
+final apiProvider = FutureProvider.autoDispose<List<DrinkInfo>>(
+  (ref) async => locator<Api>().filterByAlcoholic('Alcoholic'),
+);
 
+///
 class MyHomePage extends HookWidget {
+  ///
   MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
+  List<Widget> children = [const HomePage(), SearchPage()];
+
   @override
   Widget build(BuildContext context) {
-    return useProvider(apiProvider).when(
-      data: (drink) => Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'You have pushed the button this many times:',
-              ),
-              Text(
-                '${drink.toString()}',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: null,
-          tooltip: 'Increment',
-          child: Icon(Icons.add),
+    final _currentIndex = useState(0);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            Icon(
+              Icons.location_on,
+              color: Colors.black26,
+            ),
+            Text(
+              'THE BAR',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            )
+          ],
         ),
       ),
-      loading: () => Container(
-        color: Colors.white,
-        child: const Center(child: CircularProgressIndicator()),
-      ),
-      error: (err, stack) {
-        return Scaffold(
-          appBar: AppBar(title: const Text('Error')),
-          body: Center(
-            child: Text('$err'),
+      body: children[_currentIndex.value],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex.value,
+        items: const [
+          BottomNavigationBarItem(
+            title: Text('Home'),
+            icon: Icon(
+              Icons.home,
+            ),
           ),
-        );
-      },
+          BottomNavigationBarItem(
+            title: Text('Search'),
+            icon: Icon(
+              Icons.search,
+            ),
+          )
+        ],
+        onTap: (selected) {
+          _currentIndex.value = selected;
+        },
+      ),
     );
   }
 }
