@@ -17,10 +17,14 @@ class Api {
   final String _searchQueryParam = 'search.php';
 
   ///Search by name
-  Future<Drinks> searchCocktailByName(String name) async {
+  Future<Drinks> searchCocktailByName(
+    String name, {
+    CancelToken cancelToken,
+  }) async {
     final response = await _dio.get<Map<String, dynamic>>(
         '$_apiEndpoint$_searchQueryParam',
-        queryParameters: <String, String>{'s': name});
+        queryParameters: <String, String>{'s': name},
+        cancelToken: cancelToken);
 
     return Drinks.fromJson(response.data);
   }

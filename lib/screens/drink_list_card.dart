@@ -1,9 +1,19 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
 class DrinkListCard extends StatelessWidget {
-  const DrinkListCard({Key key}) : super(key: key);
+  const DrinkListCard(
+      {Key key,
+      this.imageUrl = '',
+      this.title = 'Basil Show',
+      this.subtitle = 'tangy Bitter Strong'})
+      : super(key: key);
+
+  final String imageUrl;
+  final String title;
+  final String subtitle;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -14,40 +24,49 @@ class DrinkListCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const AspectRatio(
+            AspectRatio(
               aspectRatio: 1,
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/negroni.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.only(
-                    topLeft: kRadiusSixteen,
-                    topRight: kRadiusSixteen,
-                    bottomRight: kRadiusSixteen,
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                imageBuilder: (context, imageProvider) => Container(
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: kRadiusSixteen,
+                      topRight: kRadiusSixteen,
+                      bottomRight: kRadiusSixteen,
+                    ),
+                    image: DecorationImage(
+                      image: imageProvider,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
+                placeholder: (context, url) =>
+                    const CircularProgressIndicator(),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
             const SizedBox(
               width: 20,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Basil Show',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Tangy, Bitter, Strong',
-                  style: Theme.of(context).textTheme.caption,
-                ),
-              ],
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    subtitle,
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                ],
+              ),
             )
           ],
         ),

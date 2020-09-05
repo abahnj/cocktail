@@ -1,3 +1,4 @@
+import 'package:cocktail/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -28,9 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Cocktails',
         theme: lightTheme,
-        routes: <String, Widget Function(BuildContext)>{
-          '/': (context) => const HomePage(),
-        },
+        home: MyHomePage(),
       );
 }
 
@@ -42,12 +41,54 @@ final apiProvider = FutureProvider.autoDispose<List<DrinkInfo>>(
 ///
 class MyHomePage extends HookWidget {
   ///
-  const MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
+  List<Widget> children = [const HomePage(), SearchPage()];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final _currentIndex = useState(0);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            Icon(
+              Icons.location_on,
+              color: Colors.black26,
+            ),
+            Text(
+              'THE BAR',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+      ),
+      body: children[_currentIndex.value],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex.value,
+        items: const [
+          BottomNavigationBarItem(
+            title: Text('Home'),
+            icon: Icon(
+              Icons.home,
+            ),
+          ),
+          BottomNavigationBarItem(
+            title: Text('Search'),
+            icon: Icon(
+              Icons.search,
+            ),
+          )
+        ],
+        onTap: (selected) {
+          _currentIndex.value = selected;
+        },
+      ),
+    );
   }
 }
