@@ -1,4 +1,9 @@
+import 'package:cocktail/services/api.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'locator.dart';
+import 'models/drinks.dart';
 
 final lightTheme = ThemeData(
   primarySwatch: Colors.pink,
@@ -15,3 +20,9 @@ const SizedBox kHeight10 = SizedBox(height: 10);
 const SizedBox kHeight20 = SizedBox(height: 20);
 const SizedBox kWidth20 = SizedBox(width: 20);
 const SizedBox kWidth10 = SizedBox(width: 10);
+
+AutoDisposeFutureProviderFamily<Drink, String> randomCocktailProvider() =>
+    FutureProvider.autoDispose.family<Drink, String>((ref, id) async {
+      final api = locator<Api>();
+      return api.lookupRandomCocktail();
+    });

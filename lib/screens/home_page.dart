@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../constants.dart';
 import 'drink_card.dart';
 import 'drink_list_card.dart';
 
 class HomePage extends HookWidget {
-  const HomePage({Key key}) : super(key: key);
+  HomePage({Key key}) : super(key: key);
+
+  final cocktailProvider = randomCocktailProvider();
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -16,7 +19,7 @@ class HomePage extends HookWidget {
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.height * .3,
-              child: const DrinkCard(),
+              child: DrinkCard(),
             ),
             kHeight20,
             Expanded(
@@ -39,7 +42,19 @@ class HomePage extends HookWidget {
             Expanded(
               flex: 4,
               child: ListView(
-                children: List.generate(10, (index) => const DrinkListCard()),
+                children: List.generate(10, (index) {
+                  final drinkProvider =
+                      useProvider(cocktailProvider(index.toString()));
+                  return drinkProvider.when(
+                    data: (drink) => DrinkListCard(
+                      title: drink.name,
+                      imageUrl: drink.drinkThumb,
+                      subtitle: drink.tags ?? '',
+                    ),
+                    loading: () => Skeleton(),
+                    error: (err, stacktrace) => Text('Error'),
+                  );
+                }),
               ),
             ),
           ],
@@ -131,4 +146,37 @@ class CustomScrollPhysics extends ScrollPhysics {
 
   @override
   bool get allowImplicitScrolling => false;
+}
+
+class Skeleton extends HookWidget {
+  final double height;
+  final double width;
+
+  Skeleton({Key key, this.height = 20, this.width = 200}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final _controller = useAnimationController(
+      duration: const Duration(milliseconds: 1500),
+    );
+
+    final gradientPosition = useAnimation(Tween<double>(
+      begin: -3,
+      end: 10,
+    ).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.linear),
+    ));
+
+    _controller.repeat();
+
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment(gradientPosition, 0),
+              end: const Alignment(-1, 0),
+              colors: const [Colors.black12, Colors.black26, Colors.black12])),
+    );
+  }
 }

@@ -4,11 +4,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class DrinkListCard extends StatelessWidget {
-  const DrinkListCard(
-      {Key key,
-      this.imageUrl = '',
-      this.title = 'Basil Show',
-      this.subtitle = 'tangy Bitter Strong'})
+  const DrinkListCard({Key key, this.imageUrl, this.title, this.subtitle})
       : super(key: key);
 
   final String imageUrl;
@@ -43,7 +39,8 @@ class DrinkListCard extends StatelessWidget {
                 ),
                 placeholder: (context, url) =>
                     const CircularProgressIndicator(),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
+                errorWidget: (context, url, dynamic error) =>
+                    const Icon(Icons.error),
               ),
             ),
             const SizedBox(
