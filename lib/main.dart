@@ -1,6 +1,7 @@
 import 'package:cocktail/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_portal/flutter_portal.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'constants.dart';
@@ -29,7 +30,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Cocktails',
         theme: lightTheme,
-        home: MyHomePage(),
+        builder: (context, child) => _Unfocus(
+          child: child,
+        ),
+        home: Portal(
+          child: MyHomePage(),
+        ),
       );
 }
 
@@ -45,7 +51,7 @@ class MyHomePage extends HookWidget {
 
   final String title;
 
-  List<Widget> children = [const HomePage(), SearchPage()];
+  List<Widget> children = [HomePage(), SearchPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -91,4 +97,23 @@ class MyHomePage extends HookWidget {
       ),
     );
   }
+}
+
+/// A widget that unfocus everything when tapped.
+///
+/// This implements the "Unfocus when tapping in empty space" behavior for the
+/// entire application.
+class _Unfocus extends HookWidget {
+  const _Unfocus({Key key, this.child}) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: child,
+      );
 }

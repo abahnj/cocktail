@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:cocktail/screens/drink_list_card.dart';
 import 'package:dio/dio.dart';
@@ -67,22 +68,34 @@ class SearchPage extends HookWidget {
               ),
             ),
           ),
-          TextField(
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    filled: true,
+                    isDense: true,
+                    hintText: 'Search',
+                    suffix: GestureDetector(
+                      onTap: () {
+                        log('message');
+                      },
+                      child: Text('Filter Type'),
+                    ),
+                    fillColor: Colors.grey,
+                    prefixIcon: Icon(Icons.search),
+                  ),
+                  textInputAction: TextInputAction.search,
+                  controller: _controller,
                 ),
               ),
-              filled: true,
-              isDense: true,
-              hintText: 'Search',
-              fillColor: Colors.grey,
-              prefixIcon: Icon(Icons.search),
-            ),
-            textInputAction: TextInputAction.search,
-            controller: _controller,
+            ],
           )
         ],
       ),
