@@ -35,6 +35,7 @@ dependencies:
   freezed_annotation: ^0.11.0+1
   cached_network_image: ^2.3.1
   flutter_portal: ^0.1.0
+  palette_generator: ^0.2.3
 
 
 dev_dependencies:
