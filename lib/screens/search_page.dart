@@ -51,11 +51,7 @@ class SearchPage extends HookWidget {
                   itemCount: drinks.length,
                   itemBuilder: (context, index) {
                     final drink = drinks[index];
-                    return DrinkListCard(
-                      imageUrl: drink.drinkThumb,
-                      title: drink.name,
-                      subtitle: drink.category,
-                    );
+                    return DrinkListCard(drink);
                   },
                 );
               },

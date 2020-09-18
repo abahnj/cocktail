@@ -685,7 +685,7 @@ class __$DrinkCopyWithImpl<$Res> extends _$DrinkCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
-class _$_Drink implements _Drink {
+class _$_Drink extends _Drink {
   const _$_Drink(
       {@JsonKey(name: 'idDrink') this.id,
       @JsonKey(name: 'strDrink') this.name,
@@ -729,7 +729,8 @@ class _$_Drink implements _Drink {
       @JsonKey(name: 'strMeasure14') this.measure14,
       @JsonKey(name: 'strMeasure15') this.measure15,
       this.strCreativeCommonsConfirmed,
-      this.dateModified});
+      this.dateModified})
+      : super._();
 
   factory _$_Drink.fromJson(Map<String, dynamic> json) =>
       _$_$_DrinkFromJson(json);
@@ -1016,7 +1017,8 @@ class _$_Drink implements _Drink {
   }
 }
 
-abstract class _Drink implements Drink {
+abstract class _Drink extends Drink {
+  const _Drink._() : super._();
   const factory _Drink(
       {@JsonKey(name: 'idDrink') String id,
       @JsonKey(name: 'strDrink') String name,

@@ -47,12 +47,13 @@ class HomePage extends HookWidget {
                       useProvider(cocktailProvider(index.toString()));
                   return drinkProvider.when(
                     data: (drink) => DrinkListCard(
-                      title: drink.name,
-                      imageUrl: drink.drinkThumb,
-                      subtitle: drink.tags ?? '',
+                      drink,
                     ),
-                    loading: () => Skeleton(),
-                    error: (err, stacktrace) => Text('Error'),
+                    loading: () => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Skeleton(),
+                    ),
+                    error: (err, stacktrace) => const Text('Error'),
                   );
                 }),
               ),
@@ -152,7 +153,7 @@ class Skeleton extends HookWidget {
   final double height;
   final double width;
 
-  Skeleton({Key key, this.height = 20, this.width = 200}) : super(key: key);
+  Skeleton({Key key, this.height = 60, this.width = 200}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

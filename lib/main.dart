@@ -1,3 +1,5 @@
+import 'package:cocktail/models/drinks.dart';
+import 'package:cocktail/screens/detail_page.dart';
 import 'package:cocktail/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -36,6 +38,17 @@ class MyApp extends StatelessWidget {
         home: Portal(
           child: MyHomePage(),
         ),
+        onGenerateRoute: (settings) {
+          if (settings?.name == 'detailsPage') {
+            final Drink drink = settings.arguments as Drink;
+            return MaterialPageRoute<dynamic>(
+              builder: (context) => DetailPage(
+                drink: drink,
+              ),
+              settings: settings,
+            );
+          }
+        },
       );
 }
 
@@ -51,7 +64,7 @@ class MyHomePage extends HookWidget {
 
   final String title;
 
-  List<Widget> children = [HomePage(), SearchPage()];
+  final children = [HomePage(), SearchPage()];
 
   @override
   Widget build(BuildContext context) {
