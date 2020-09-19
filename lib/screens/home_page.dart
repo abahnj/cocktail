@@ -32,7 +32,7 @@ class HomePage extends HookWidget {
             ),
             kHeight10,
             Text(
-              'OTHER COCKTAILS',
+              'RANDOM COCKTAILS',
               style: Theme.of(context).textTheme.caption.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,

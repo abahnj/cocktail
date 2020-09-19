@@ -1,6 +1,3 @@
-import 'package:cocktail/models/drinks.dart';
-import 'package:cocktail/screens/detail_page.dart';
-import 'package:cocktail/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_portal/flutter_portal.dart';
@@ -8,9 +5,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'constants.dart';
 import 'locator.dart';
-import 'models/filter.dart';
+import 'models/drinks.dart';
+import 'screens/detail_page.dart';
 import 'screens/home_page.dart';
-import 'services/api.dart';
+import 'screens/search_page.dart';
 
 Future<void> main() async {
   setupLocator();
@@ -51,11 +49,6 @@ class MyApp extends StatelessWidget {
         },
       );
 }
-
-/// Api provider
-final apiProvider = FutureProvider.autoDispose<List<DrinkInfo>>(
-  (ref) async => locator<Api>().filterByAlcoholic('Alcoholic'),
-);
 
 ///
 class MyHomePage extends HookWidget {

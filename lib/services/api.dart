@@ -89,26 +89,32 @@ class Api {
   final String _filterQueryParam = 'filter.php';
 
   ///Filter by ingredient
-  Future<List<DrinkInfo>> searchByIngredient(String param) async =>
-      _filter(param, 'i');
+  Future<List<DrinkInfo>> searchByIngredient(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'i', cancelToken);
 
   ///Filter by alcoholic
-  Future<List<DrinkInfo>> filterByAlcoholic(String param) async =>
-      _filter(param, 'a');
+  Future<List<DrinkInfo>> filterByAlcoholic(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'a', cancelToken);
 
   ///Filter by Category
-  Future<List<DrinkInfo>> filterByCategory(String param) async =>
-      _filter(param, 'c');
+  Future<List<DrinkInfo>> filterByCategory(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'c', cancelToken);
 
   ///Filter by Glass
-  Future<List<DrinkInfo>> filterByGlass(String param) async =>
-      _filter(param, 'g');
+  Future<List<DrinkInfo>> filterByGlass(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'g', cancelToken);
 
-  Future<List<DrinkInfo>> _filter(String param, String category) async {
+  Future<List<DrinkInfo>> _filter(
+      String param, String category, CancelToken cancelToken) async {
     try {
       final response = await _dio.get<Map<String, dynamic>>(
           '$_apiEndpoint$_filterQueryParam',
-          queryParameters: <String, String>{category: param});
+          queryParameters: <String, String>{category: param},
+          cancelToken: cancelToken);
       return FilterResponse.fromJson(response.data).drinks;
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
