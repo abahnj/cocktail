@@ -1,72 +1,134 @@
-import 'package:cocktail/locator.dart';
-import 'package:cocktail/models/drinks.dart';
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
+
+import '../locator.dart';
+import '../models/drinks.dart';
+import '../models/filter.dart';
+import '../models/ingredients.dart';
 
 class Api {
   static const String _apiEndpoint =
       'https://www.thecocktaildb.com/api/json/v1/1/';
 
-  var _dio = locator<Dio>();
-
-  Future<Drinks> getDrink() async {
-    var response = await _dio.get(
-      '$_apiEndpoint',
-      queryParameters: {'i': 11007},
-      options: Options(responseType: ResponseType.json),
-    );
-
-    //log(json.decode(response.data.toString())["drink"].toString());
-
-    if (response.statusCode == 200) {
-      return Drinks.fromJson(response.data);
-    }
-  }
+  final Dio _dio = locator<Dio>();
 
   ///Search
-  final String searchQueryParam = 'search.php';
+  final String _searchQueryParam = 'search.php';
 
   ///Search by name
-  Future<Drinks> searchCocktailByName(String name) async {
-    var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'s': name});
+  Future<Drinks> searchCocktailByName(
+    String name, {
+    CancelToken cancelToken,
+  }) async {
+    final response = await _dio.get<Map<String, dynamic>>(
+        '$_apiEndpoint$_searchQueryParam',
+        queryParameters: <String, String>{'s': name},
+        cancelToken: cancelToken);
 
     return Drinks.fromJson(response.data);
   }
 
   ///Search ingredient by name
   Future<Drinks> searchIngredientByName(String name) async {
-    var response = await _dio
-        .get('$_apiEndpoint$searchQueryParam', queryParameters: {'i': name});
+    final response = await _dio.get<Map<String, dynamic>>(
+        '$_apiEndpoint$_searchQueryParam',
+        queryParameters: <String, String>{'i': name});
 
     return Drinks.fromJson(response.data);
   }
 
-  ///Search ingredient by name
-
   ///Lookup
-  final String lookupQueryParam = 'lookup.php';
+  final String _lookupQueryParam = 'lookup.php';
 
   ///Lookup full cocktail details by id
   Future<Drink> lookupCocktailById(String name) async {
-    var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'i': name});
+    final response = await _dio.get<Map<String, dynamic>>(
+        '$_apiEndpoint$_lookupQueryParam',
+        queryParameters: <String, String>{'i': name});
 
     return Drinks.fromJson(response.data).drinks.first;
   }
 
   ///Lookup ingredient by ID
-  Future<Drink> lookupIngredientById(String name) async {
-    var response = await _dio
-        .get('$_apiEndpoint$lookupQueryParam', queryParameters: {'iid': name});
+  Future<Ingredient> lookupIngredientById(String id) async {
+    final response = await _dio.get<Map<String, dynamic>>(
+        '$_apiEndpoint$_lookupQueryParam',
+        queryParameters: <String, String>{'iid': id});
 
-    return Drinks.fromJson(response.data).drinks.first;
+    return Ingredients.fromJson(response.data).ingredients.first;
   }
 
   ///Lookup a random cocktail
+  final String _randomParam = 'random.php';
+
+  Future<Drink> lookupRandomCocktail() async {
+    try {
+      final response =
+          await _dio.get<Map<String, dynamic>>('$_apiEndpoint$_randomParam');
+      return Drinks.fromJson(response.data).drinks.first;
+    } on DioError catch (e) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx and is also not 304.
+      if (e.response != null) {
+        throw Future<String>.error('error');
+        print(e.response.data);
+        print(e.response.headers);
+        print(e.response.request);
+      } else {
+        // Something happened in setting up or sending
+        // the request that triggered an Error
+        throw Future<String>.error('error');
+        print(e.request);
+        print(e.message);
+      }
+    }
+  }
 
   ///Filter
+  final String _filterQueryParam = 'filter.php';
+
   ///Filter by ingredient
+  Future<List<DrinkInfo>> searchByIngredient(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'i', cancelToken);
+
   ///Filter by alcoholic
+  Future<List<DrinkInfo>> filterByAlcoholic(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'a', cancelToken);
+
   ///Filter by Category
+  Future<List<DrinkInfo>> filterByCategory(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'c', cancelToken);
+
   ///Filter by Glass
+  Future<List<DrinkInfo>> filterByGlass(
+          String param, CancelToken cancelToken) async =>
+      _filter(param, 'g', cancelToken);
+
+  Future<List<DrinkInfo>> _filter(
+      String param, String category, CancelToken cancelToken) async {
+    try {
+      final response = await _dio.get<Map<String, dynamic>>(
+          '$_apiEndpoint$_filterQueryParam',
+          queryParameters: <String, String>{category: param},
+          cancelToken: cancelToken);
+      return FilterResponse.fromJson(response.data).drinks;
+    } on DioError catch (e) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx and is also not 304.
+      if (e.response != null) {
+        log(e.response.data.toString());
+        print(e.response.headers);
+        print(e.response.request);
+      } else {
+        // Something happened in setting up
+        // or sending the request that triggered an Error
+        print(e.request);
+        print(e.message);
+      }
+    }
+  }
 }
